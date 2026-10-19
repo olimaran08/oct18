@@ -1,175 +1,2370 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f4f0e8">
-<meta name="description" content="RAY Design & Build by ARCHDUO — architecture, interiors and execution in Chennai. Explore services, finishes and an interactive indicative cost planner.">
-<title>RAY Design & Build by ARCHDUO — Spaces, considered.</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RAY Design & Build by ARCHDUO — Architectural Interiors & Turnkey Execution</title>
+<meta name="description" content="RAY Design & Build by ARCHDUO — Architectural interiors, modular joinery and turnkey construction in Chennai. Complete interactive BOQ cost planner, materials standard and portfolio.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
 <style>
-:root{--paper:#f4f0e8;--ink:#202923;--muted:#6f746b;--line:#d7d3c8;--accent:#b66d4b;--accent2:#d9a98f;--green:#596b58;--panel:#e8e3d8;--white:#fffdf8;--dark:#202923;--dark2:#2c382f;--serif:"Playfair Display",Georgia,serif;--sans:"DM Sans",Arial,sans-serif;--display:"Manrope",Arial,sans-serif;--mono:"DM Mono",monospace}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}button,input,select{font:inherit}button,a{cursor:pointer}a{color:inherit;text-decoration:none}.wrap{width:min(1220px,calc(100% - 48px));margin:auto}.eyebrow{font:11px var(--mono);text-transform:uppercase;letter-spacing:.16em;color:var(--accent)}.section{padding:112px 0;border-bottom:1px solid var(--line)}.section-head{display:flex;align-items:end;justify-content:space-between;gap:32px;margin-bottom:46px}.section-head h2{font:500 clamp(38px,5vw,70px)/1.02 var(--serif);letter-spacing:-.045em;margin:13px 0 0;max-width:700px}.section-head p{max-width:360px;line-height:1.7;color:var(--muted);font-size:14px;margin:0}.btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;padding:15px 19px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);font-size:12px;font-weight:700;letter-spacing:.04em;transition:.25s}.btn:hover{background:var(--accent);border-color:var(--accent);transform:translateY(-2px)}.btn.light{background:transparent;color:var(--ink)}.btn.light:hover{color:white}.topline{background:var(--dark);color:#e9e4d8;text-align:center;padding:9px 15px;font:10px var(--mono);letter-spacing:.1em}.topline span{color:#e4aa8e}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:25px;padding:0 max(24px,calc((100% - 1220px)/2));position:sticky;top:0;z-index:20;background:rgba(244,240,232,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:12px;min-width:190px}.brand-mark{width:37px;height:37px;border:1px solid var(--accent);display:grid;place-items:center;font:600 15px var(--display);color:var(--accent);letter-spacing:-.1em}.brand strong{display:block;font:800 17px var(--display);letter-spacing:.1em}.brand small{display:block;font:9px var(--mono);letter-spacing:.12em;color:var(--muted);margin-top:3px}.navlinks{display:flex;align-items:center;gap:25px;font-size:11px;font-weight:700;color:#41463f}.navlinks a:hover{color:var(--accent)}.nav-cta{padding:12px 15px;background:var(--accent);color:white;font-size:11px;font-weight:700}.menu{display:none;border:0;background:none;font-size:25px}
-.hero{min-height:670px;display:grid;grid-template-columns:1.05fr .95fr;gap:36px;padding-top:70px;padding-bottom:72px;align-items:center}.hero-copy{padding:20px 0}.hero h1{font:500 clamp(54px,7vw,100px)/.94 var(--serif);letter-spacing:-.065em;margin:25px 0}.hero h1 em{color:var(--accent);font-weight:500}.hero .lead{font-size:16px;line-height:1.8;color:var(--muted);max-width:490px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:29px 0 36px}.hero-stats{display:flex;gap:28px;padding-top:22px;border-top:1px solid var(--line);max-width:490px}.hero-stats strong{display:block;font:600 19px var(--display)}.hero-stats span{display:block;font-size:10px;color:var(--muted);margin-top:5px}.hero-visual{height:520px;position:relative;background:var(--panel);overflow:hidden}.hero-visual img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.75)}.hero-visual .visual-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 52%,rgba(23,32,26,.58))}.hero-note{position:absolute;bottom:22px;left:22px;color:white;z-index:1}.hero-note small{font:10px var(--mono);letter-spacing:.12em}.hero-note strong{display:block;font:500 25px var(--serif);margin-top:6px}.visual-tag{position:absolute;top:20px;right:20px;background:var(--paper);padding:12px 14px;font:10px var(--mono);line-height:1.6}.vertical-word{position:absolute;right:-21px;top:45%;transform:rotate(90deg);font:9px var(--mono);letter-spacing:.2em;color:var(--muted)}
-.ticker{background:var(--accent);color:#fff5e9;padding:16px 0;overflow:hidden;white-space:nowrap;font:11px var(--mono);letter-spacing:.14em}.ticker-track{display:flex;gap:36px;justify-content:space-around}
-.intro-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:70px}.intro-grid h2{font:500 clamp(35px,4.8vw,64px)/1.08 var(--serif);letter-spacing:-.04em;margin:12px 0}.intro-body{font-size:16px;line-height:1.9;color:var(--muted);max-width:690px}.intro-body p{margin-top:0}.signature{font:italic 24px var(--serif);color:var(--accent);margin-top:24px}
-.estimate{background:var(--dark);color:var(--paper);border-bottom:0}.estimate .eyebrow{color:#dca58a}.estimate .section-head p{color:#c0c5b9}.estimator{display:grid;grid-template-columns:1.15fr .85fr;border:1px solid #4d594f;background:#263128}.est-left{padding:30px;border-right:1px solid #4d594f}.step{display:flex;gap:13px;align-items:start;padding:22px 0;border-bottom:1px solid #445046}.step:last-child{border-bottom:0}.step-num{font:11px var(--mono);color:#dba58a;padding-top:5px}.step-content{flex:1}.step h3{font:600 15px var(--display);margin:0 0 7px}.step p{font-size:12px;line-height:1.6;color:#aeb8ad;margin:0 0 14px}.choice-row{display:flex;gap:8px;flex-wrap:wrap}.choice{border:1px solid #526054;background:transparent;color:#e8e5db;padding:10px 13px;font-size:11px;transition:.2s}.choice.active,.choice:hover{background:var(--accent);border-color:var(--accent);color:#fff}.choice small{display:block;font:9px var(--mono);opacity:.75;margin-top:4px}.fieldline{display:flex;justify-content:space-between;gap:20px;align-items:center;margin:16px 0 8px;font-size:12px}.fieldline output{font:12px var(--mono);color:#e4aa8e}.range{width:100%;accent-color:#d18b6a;cursor:pointer}.range-scale{display:flex;justify-content:space-between;color:#9ea89d;font:9px var(--mono);margin-top:6px}.select-row{display:flex;gap:8px;flex-wrap:wrap}.scope-options{display:grid;grid-template-columns:1fr 1fr;gap:8px}.scope-option{border:1px solid #4a584b;padding:12px;display:flex;gap:9px;align-items:start;font-size:11px;color:#dbe0d6}.scope-option input{accent-color:#c57a58;margin-top:2px}.scope-option small{display:block;color:#9fa99e;font-size:10px;line-height:1.5;margin-top:4px}.est-right{padding:30px;display:flex;flex-direction:column;position:relative}.result-kicker{font:10px var(--mono);letter-spacing:.12em;color:#c7a08b;text-transform:uppercase}.result-price{font:500 clamp(38px,4.2vw,57px)/1 var(--serif);letter-spacing:-.04em;margin:18px 0 9px}.result-price span{font:11px var(--mono);letter-spacing:0;color:#aab5a8}.result-caption{font-size:12px;color:#aeb8ad;line-height:1.7}.result-divider{height:1px;background:#4b584c;margin:23px 0}.breakdown{display:grid;gap:12px}.break-row{display:flex;justify-content:space-between;gap:15px;font-size:12px;color:#d5dbd0}.break-row span:last-child{font-family:var(--mono);white-space:nowrap}.break-row.total{border-top:1px solid #4b584c;padding-top:14px;color:white;font-weight:700}.gst-note{font-size:10px;color:#9fa99e;line-height:1.6;margin:15px 0 20px}.est-right .btn{background:var(--paper);color:var(--ink);border-color:var(--paper);margin-top:auto}.est-right .btn:hover{background:var(--accent);color:white;border-color:var(--accent)}.estimate-disclaimer{font-size:10px;color:#9ea99e;line-height:1.7;margin-top:20px}
-.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.service-card{border:1px solid var(--line);background:var(--white);min-height:310px;display:flex;flex-direction:column;padding:24px;transition:.25s}.service-card:hover{transform:translateY(-5px);border-color:var(--accent)}.card-index{font:10px var(--mono);color:var(--accent)}.service-icon{height:86px;display:grid;place-items:center;font-size:36px;color:var(--green)}.service-card h3{font:500 27px var(--serif);margin:0 0 9px}.service-card p{font-size:12px;line-height:1.7;color:var(--muted);margin:0 0 22px}.card-link{margin-top:auto;padding-top:16px;border-top:1px solid var(--line);font:10px var(--mono);display:flex;justify-content:space-between}
-.portfolio{background:var(--panel)}.portfolio-grid{display:grid;grid-template-columns:1.15fr .85fr .85fr;grid-template-rows:260px 260px;gap:14px}.project{position:relative;overflow:hidden;background:#d5d0c3}.project:first-child{grid-row:span 2}.project img{width:100%;height:100%;object-fit:cover;transition:transform .6s;filter:saturate(.72)}.project:hover img{transform:scale(1.04)}.project .proj-label{position:absolute;bottom:0;left:0;right:0;padding:22px;color:white;background:linear-gradient(transparent,rgba(20,29,23,.82))}.proj-label small{font:9px var(--mono);letter-spacing:.12em}.proj-label strong{display:block;font:500 23px var(--serif);margin-top:5px}.proj-label span{font-size:10px;opacity:.8}.project-placeholder{height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;background:linear-gradient(135deg,#b6b7a7,#d9c5ae);color:#39463a}.project-placeholder span{font:10px var(--mono);letter-spacing:.15em}.project-placeholder strong{font:500 31px var(--serif);margin:10px}
-.compare{display:grid;grid-template-columns:1fr 1fr;gap:16px}.compare-panel{padding:28px;background:var(--white);border:1px solid var(--line)}.compare-panel.dark{background:var(--dark);color:var(--paper);border-color:var(--dark)}.compare-panel h3{font:500 30px var(--serif);margin:10px 0 24px}.compare-visual{height:270px;position:relative;overflow:hidden;background:#d9d1c2}.compare-visual img{width:100%;height:100%;object-fit:cover}.compare-visual .after-layer{position:absolute;inset:0;overflow:hidden;width:50%;border-right:2px solid white}.compare-visual .after-layer img{width:100%;max-width:none;object-fit:cover;object-position:left center}.compare-visual input{position:absolute;inset:0;width:100%;opacity:0;cursor:ew-resize}.compare-label{position:absolute;top:12px;padding:7px 10px;background:rgba(30,40,32,.8);color:white;font:9px var(--mono);letter-spacing:.1em}.compare-label.left{left:12px}.compare-label.right{right:12px}
-.process{background:var(--dark);color:var(--paper)}.process .section-head p{color:#aeb8ad}.process-track{display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid #526052;margin-top:56px}.phase{padding:22px 15px 0 0;position:relative}.phase:before{content:"";position:absolute;width:8px;height:8px;border-radius:50%;background:var(--accent2);top:-5px;left:0}.phase .num{font:10px var(--mono);color:#dba58a}.phase h3{font:500 21px var(--serif);margin:16px 0 9px}.phase p{font-size:11px;line-height:1.7;color:#b1baaf}.phase small{font:9px var(--mono);color:#e3aa8d}.payment-strip{margin-top:42px;padding:20px 22px;border:1px solid #4a584b;display:flex;align-items:center;justify-content:space-between;gap:25px}.payment-strip strong{font:500 22px var(--serif)}.payment-splits{display:flex;gap:20px}.payment-splits span{font:10px var(--mono);color:#c6cec2}.payment-splits b{color:#e2a88b;font-size:18px;display:block;margin-bottom:4px}
-.why-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}.why-grid h2{font:500 clamp(38px,5vw,68px)/1.04 var(--serif);margin:15px 0;letter-spacing:-.04em}.why-grid .intro{font-size:14px;color:var(--muted);line-height:1.8}.pillar-list{border-top:1px solid var(--line)}.pillar{display:grid;grid-template-columns:42px 1fr;gap:14px;padding:20px 0;border-bottom:1px solid var(--line)}.pillar .n{font:10px var(--mono);color:var(--accent);padding-top:5px}.pillar h3{font:600 15px var(--display);margin:0 0 6px}.pillar p{font-size:12px;color:var(--muted);line-height:1.7;margin:0}
-.finish-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.finish-card{background:var(--white);border:1px solid var(--line)}.finish-image{height:230px;background-size:cover;background-position:center}.finish-card:nth-child(1) .finish-image{background-image:linear-gradient(120deg,rgba(0,0,0,.08),rgba(0,0,0,.08)),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85')}.finish-card:nth-child(2) .finish-image{background-image:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85')}.finish-card:nth-child(3) .finish-image{background-image:url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85')}.finish-content{padding:20px}.finish-content h3{font:500 25px var(--serif);margin:8px 0}.finish-content p{font-size:12px;color:var(--muted);line-height:1.7}.finish-content .rangeprice{font:12px var(--mono);color:var(--accent)}
-.faq{display:grid;grid-template-columns:.7fr 1.3fr;gap:65px}.faq h2{font:500 clamp(38px,4.5vw,62px)/1.03 var(--serif);margin:13px 0}.faq-list details{border-top:1px solid var(--line);padding:20px 0}.faq-list details:last-child{border-bottom:1px solid var(--line)}.faq-list summary{cursor:pointer;list-style:none;font-weight:600;font-size:14px;display:flex;justify-content:space-between;gap:20px}.faq-list summary::-webkit-details-marker{display:none}.faq-list summary:after{content:"+";font:20px var(--mono);color:var(--accent)}.faq-list details[open] summary:after{content:"−"}.faq-list p{font-size:13px;line-height:1.8;color:var(--muted);max-width:650px}
-.contact{background:var(--accent);color:#fff7ef;border-bottom:0}.contact .eyebrow{color:#ffe1d0}.contact-grid{display:grid;grid-template-columns:1fr .8fr;gap:60px;align-items:center}.contact h2{font:500 clamp(45px,6vw,80px)/.98 var(--serif);letter-spacing:-.05em;margin:15px 0}.contact p{font-size:14px;line-height:1.8;max-width:520px;color:#ffdfce}.contact .btn{background:var(--paper);color:var(--ink);border-color:var(--paper)}.contact-details{border-left:1px solid rgba(255,255,255,.4);padding-left:30px}.contact-details div{padding:15px 0;border-bottom:1px solid rgba(255,255,255,.25)}.contact-details small{display:block;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;opacity:.75;margin-bottom:6px}.contact-details strong{font-size:14px;font-weight:600}
-footer{background:var(--dark);color:#e6e4d9;padding:46px 0 22px}.footer-top{display:flex;justify-content:space-between;gap:40px;padding-bottom:40px;border-bottom:1px solid #4b574c}.footer-top p{font-size:12px;line-height:1.8;color:#aeb8ad;max-width:330px}.footer-links{display:flex;gap:60px}.footer-links div{display:grid;align-content:start;gap:12px}.footer-links strong{font:10px var(--mono);color:#dba58a;letter-spacing:.1em;margin-bottom:5px}.footer-links a{font-size:11px;color:#d3d8ce}.footer-bottom{display:flex;justify-content:space-between;gap:20px;padding-top:20px;font:9px var(--mono);color:#8f9a8e}
-.modal{position:fixed;inset:0;background:rgba(20,27,22,.7);z-index:50;display:none;align-items:center;justify-content:center;padding:20px}.modal.open{display:flex}.modal-box{background:var(--paper);padding:30px;width:min(520px,100%);max-height:90vh;overflow:auto;position:relative}.modal-box h3{font:500 34px var(--serif);margin:10px 0}.modal-box p{font-size:12px;line-height:1.7;color:var(--muted)}.modal-close{position:absolute;right:15px;top:15px;border:0;background:none;font-size:24px}.formgrid{display:grid;gap:12px;margin-top:18px}.formgrid input,.formgrid select,.formgrid textarea{width:100%;padding:13px;border:1px solid var(--line);background:var(--white);color:var(--ink)}.formgrid textarea{min-height:85px;resize:vertical}.fineprint{font-size:10px!important}
-@media(max-width:900px){.navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:var(--paper);padding:22px 24px;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.menu{display:block}.nav-cta{display:none}.hero{grid-template-columns:1fr;gap:30px;padding-top:35px}.hero-visual{height:430px}.section{padding:80px 0}.section-head{display:block}.section-head p{margin-top:18px}.intro-grid,.why-grid,.faq,.contact-grid{grid-template-columns:1fr;gap:30px}.estimator{grid-template-columns:1fr}.est-left{border-right:0;border-bottom:1px solid #4d594f}.cards3,.finish-grid{grid-template-columns:1fr 1fr}.process-track{grid-template-columns:repeat(3,1fr);row-gap:28px}.payment-strip{align-items:flex-start;flex-direction:column}.portfolio-grid{grid-template-columns:1fr 1fr;grid-template-rows:280px 220px 220px}.project:first-child{grid-row:span 2}.project:nth-child(4){grid-column:span 2}.contact-details{border-left:0;border-top:1px solid rgba(255,255,255,.4);padding:20px 0 0}.footer-top{flex-direction:column}.footer-links{gap:35px}}
-@media(max-width:560px){.wrap{width:calc(100% - 34px)}.nav{padding:0 17px;height:68px}.navlinks{top:68px}.brand{min-width:0}.brand strong{font-size:15px}.hero h1{font-size:55px}.hero-visual{height:350px}.hero-stats{gap:16px}.hero-stats strong{font-size:16px}.section{padding:65px 0}.section-head h2{font-size:42px}.est-left,.est-right{padding:20px}.scope-options{grid-template-columns:1fr}.cards3,.finish-grid{grid-template-columns:1fr}.portfolio-grid{grid-template-columns:1fr;grid-template-rows:300px 220px 220px 220px}.project:first-child{grid-row:auto}.project:nth-child(4){grid-column:auto}.process-track{grid-template-columns:repeat(2,1fr)}.payment-splits{gap:12px}.payment-splits b{font-size:15px}.compare{grid-template-columns:1fr}.compare-visual{height:220px}.footer-links{gap:20px;flex-wrap:wrap}.footer-bottom{flex-direction:column}.hero-actions .btn{width:100%}}
+:root {
+  --paper: #f5f1ea;
+  --paper-card: #fcfaf6;
+  --ink: #1b231d;
+  --ink-soft: #2e3831;
+  --muted: #677168;
+  --line: #dbd6cb;
+  --line-dim: rgba(27, 35, 29, 0.08);
+  --grid-line: rgba(27, 35, 29, 0.05);
+  --accent: #b66d4b;
+  --accent-light: #dfa384;
+  --accent-glow: rgba(182, 109, 75, 0.12);
+  --sage: #47584a;
+  --cad-blue: #1b3854;
+  --gold: #b38842;
+  --dark: #171f19;
+  --dark-panel: #202a22;
+  --dark-border: #334035;
+  
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "DM Sans", -apple-system, sans-serif;
+  --mono: "DM Mono", "Share Tech Mono", monospace;
+  --tech: "Space Grotesk", sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* CAD Technical Blueprint Grid Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: 
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(rgba(27, 35, 29, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27, 35, 29, 0.02) 1px, transparent 1px);
+  background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
+}
+
+/* Custom Precision Drafting Crosshair Cursor */
+#crosshair {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  transition: width .2s, height .2s, background .2s;
+}
+#ch-x {
+  position: fixed;
+  height: 1px;
+  width: 24px;
+  background: var(--accent);
+  pointer-events: none;
+  z-index: 10000;
+  transform: translateY(-50%);
+  opacity: 0.6;
+}
+#ch-y {
+  position: fixed;
+  width: 1px;
+  height: 24px;
+  background: var(--accent);
+  pointer-events: none;
+  z-index: 10000;
+  transform: translateX(-50%);
+  opacity: 0.6;
+}
+
+/* Telemetry HUD Elements */
+.hud-stamp {
+  position: fixed;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  z-index: 90;
+  pointer-events: none;
+  text-transform: uppercase;
+}
+.hud-tl { top: 18px; left: 24px; }
+.hud-br { bottom: 18px; right: 24px; text-align: right; }
+.hud-telemetry { color: var(--accent); font-weight: 500; }
+
+.wrap { width: min(1260px, calc(100% - 48px)); margin-inline: auto; position: relative; z-index: 1; }
+
+/* Global Typography & Micro-elements */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 1px;
+  background: var(--accent);
+}
+.dim-tag {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 9px;
+  padding: 3px 8px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.7);
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 26px;
+  font-family: var(--tech);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--ink);
+  color: var(--paper);
+  border: 1px solid var(--ink);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(182, 109, 75, 0.25);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line);
+}
+.btn-outline:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+  box-shadow: none;
+}
+
+/* Header & Navigation */
+.cad-topbar {
+  background: var(--dark);
+  color: #d1d8cf;
+  padding: 8px 24px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--dark-border);
+  position: relative;
+  z-index: 100;
+}
+.cad-topbar span { color: var(--accent-light); }
+.nav-header {
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 max(24px, calc((100% - 1260px)/2));
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(245, 241, 234, 0.94);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--line);
+}
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: var(--ink);
+}
+.brand-cad-box {
+  width: 42px;
+  height: 42px;
+  border: 1.5px solid var(--accent);
+  display: grid;
+  place-items: center;
+  font-family: var(--tech);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--accent);
+  position: relative;
+}
+.brand-cad-box::after {
+  content: "01";
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+  font-size: 8px;
+  background: var(--paper);
+  padding: 1px 3px;
+  font-family: var(--mono);
+}
+.brand-title {
+  display: block;
+  font-family: var(--tech);
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: 0.1em;
+}
+.brand-subtitle {
+  display: block;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  color: var(--muted);
+}
+.nav-menu {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+.nav-menu a {
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--ink-soft);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.25s;
+}
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.3s;
+}
+.nav-menu a:hover { color: var(--accent); }
+.nav-menu a:hover::after { width: 100%; }
+.menu-toggle { display: none; background: none; border: 0; font-size: 24px; cursor: pointer; color: var(--ink); }
+
+/* Hero Section with Live 3D Axonometric Canvas */
+.hero-sec {
+  padding: 70px 0 80px;
+  min-height: calc(100vh - 120px);
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 40px;
+  align-items: center;
+}
+.hero-copy h1 {
+  font-family: var(--serif);
+  font-size: clamp(48px, 6.2vw, 92px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  margin: 22px 0 24px;
+}
+.hero-copy h1 em {
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 400;
+}
+.hero-lead {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 520px;
+  margin-bottom: 34px;
+}
+.hero-cad-specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  margin-top: 36px;
+}
+.h-spec-item strong {
+  display: block;
+  font-family: var(--tech);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.h-spec-item span {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  display: block;
+  margin-top: 4px;
+}
+.hero-3d-box {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: var(--paper-card);
+  border: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(27, 35, 29, 0.05);
+}
+#hero3d {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: grab;
+}
+#hero3d:active { cursor: grabbing; }
+.cad-wire-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  background: rgba(245, 241, 234, 0.9);
+  padding: 4px 8px;
+  border: 1px solid var(--line);
+  pointer-events: none;
+}
+.cad-axis-ind {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+/* Architecture Ticker */
+.arch-ticker {
+  background: var(--dark);
+  color: var(--paper);
+  padding: 14px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 1px solid var(--dark-border);
+  border-bottom: 1px solid var(--dark-border);
+}
+.ticker-content {
+  display: flex;
+  gap: 40px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  animation: tickScroll 28s linear infinite;
+}
+.ticker-content span { color: var(--accent-light); }
+@keyframes tickScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Section Common Structure */
+.section-pad {
+  padding: 110px 0;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+.sec-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 36px;
+  margin-bottom: 50px;
+}
+.sec-head h2 {
+  font-family: var(--serif);
+  font-size: clamp(36px, 4.8vw, 68px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  margin-top: 12px;
+}
+.sec-head h2 em { font-style: italic; color: var(--accent); }
+.sec-head p {
+  font-size: 14px;
+  color: var(--muted);
+  max-width: 420px;
+  line-height: 1.8;
+}
+
+/* ══════════════════════════════════════════════════════════
+   AESTHETIX-GRADE INTERACTIVE COST ESTIMATOR & BOQ CALCULATOR
+   ══════════════════════════════════════════════════════════ */
+.estimator-sec {
+  background: var(--dark);
+  color: var(--paper);
+  border-bottom: 0;
+}
+.estimator-sec .eyebrow { color: var(--accent-light); }
+.estimator-sec .sec-head h2 { color: #fff; }
+.estimator-sec .sec-head p { color: #b7c0b6; }
+
+.boq-shell {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  border: 1px solid var(--dark-border);
+  background: #1d2720;
+}
+.boq-controls {
+  padding: 38px;
+  border-right: 1px solid var(--dark-border);
+}
+.boq-step {
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.boq-step:last-child { border-bottom: 0; }
+.b-step-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.b-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--accent-light);
+  border: 1px solid var(--dark-border);
+  padding: 2px 7px;
+}
+.b-step-head h3 {
+  font-family: var(--tech);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+.boq-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.b-pill {
+  border: 1px solid var(--dark-border);
+  background: rgba(255, 255, 255, 0.03);
+  color: #dbe3d8;
+  padding: 10px 16px;
+  font-family: var(--mono);
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.b-pill small {
+  display: block;
+  font-size: 9px;
+  opacity: 0.65;
+  margin-top: 3px;
+}
+.b-pill:hover, .b-pill.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* Sliders */
+.field-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 18px 0 8px;
+  font-size: 12px;
+  color: #cfd8cc;
+}
+.field-header output {
+  font-family: var(--mono);
+  color: var(--accent-light);
+  font-weight: 500;
+}
+.range-slider {
+  width: 100%;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+.scale-bounds {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 9px;
+  color: #8c988b;
+  margin-top: 4px;
+}
+
+/* Material Quality Specification Tiers (AesthetiX Standard) */
+.tier-specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 14px;
+}
+.t-card {
+  border: 1px solid var(--dark-border);
+  background: rgba(255,255,255,0.02);
+  padding: 14px;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.t-card.active, .t-card:hover {
+  border-color: var(--accent);
+  background: rgba(182, 109, 75, 0.12);
+}
+.t-title {
+  font-family: var(--tech);
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  display: block;
+}
+.t-rate {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--accent-light);
+  margin: 4px 0 8px;
+}
+.t-list {
+  list-style: none;
+  font-size: 10px;
+  color: #9fae9d;
+  line-height: 1.5;
+}
+.t-list li::before { content: "• "; color: var(--accent); }
+
+/* Addon Scope Checklist */
+.addon-matrix {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+.add-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  border: 1px solid var(--dark-border);
+  padding: 12px;
+  background: rgba(255,255,255,0.02);
+  font-size: 11px;
+  cursor: pointer;
+}
+.add-label input {
+  accent-color: var(--accent);
+  margin-top: 2px;
+}
+.add-label strong { display: block; color: #e1e8df; font-weight: 500; }
+.add-label small { display: block; font-size: 9px; color: #8e9a8d; line-height: 1.4; margin-top: 3px; }
+
+/* Right Panel: Live BOQ Summary */
+.boq-summary {
+  padding: 38px;
+  display: flex;
+  flex-direction: column;
+  background: #18211a;
+  position: relative;
+}
+.summary-kicker {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: var(--accent-light);
+  text-transform: uppercase;
+}
+.live-total-price {
+  font-family: var(--serif);
+  font-size: clamp(38px, 3.8vw, 56px);
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: -0.03em;
+  margin: 14px 0 8px;
+  line-height: 1;
+}
+.live-total-price small {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: #92a090;
+  letter-spacing: 0;
+}
+.boq-notes {
+  font-size: 12px;
+  color: #b1bdb0;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.boq-line-items {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0;
+  border-top: 1px solid var(--dark-border);
+  border-bottom: 1px solid var(--dark-border);
+  padding: 20px 0;
+}
+.boq-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #d1dcce;
+}
+.boq-row span:last-child {
+  font-family: var(--mono);
+  color: #fff;
+  white-space: nowrap;
+}
+.boq-row.grand-total {
+  border-top: 1px dashed var(--dark-border);
+  padding-top: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-light);
+}
+.aesthetix-guarantee-badge {
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 2px solid var(--accent);
+  padding: 12px 14px;
+  margin: 18px 0;
+  font-size: 11px;
+  color: #aebdb0;
+  line-height: 1.6;
+}
+.aesthetix-guarantee-badge strong {
+  display: block;
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  margin-bottom: 2px;
+}
+
+/* ══════════════════════════════════════════════════════════
+   INTERACTIVE ARCHITECTURAL BLUEPRINT FLOOR PLAN SECTION
+   ══════════════════════════════════════════════════════════ */
+.floorplan-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+.cad-plan-viewer {
+  border: 1px solid var(--line);
+  background: #eae5dc;
+  position: relative;
+  aspect-ratio: 4/3;
+  padding: 24px;
+  box-shadow: inset 0 0 40px rgba(27,35,29,0.04);
+}
+.cad-plan-viewer svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.fp-interactive-room {
+  fill: rgba(255, 255, 255, 0.4);
+  stroke: var(--ink);
+  stroke-width: 1.2;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.fp-interactive-room:hover, .fp-interactive-room.active {
+  fill: rgba(182, 109, 75, 0.22);
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+.plan-detail-card {
+  background: var(--paper-card);
+  border: 1px solid var(--line);
+  padding: 36px;
+  position: relative;
+}
+.plan-detail-card::before {
+  content: "SHEET // AR-FP-04";
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--muted);
+}
+.plan-detail-card h3 {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 400;
+  margin: 12px 0 10px;
+}
+.plan-detail-card p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+.spec-dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+.spec-dl div small {
+  display: block;
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+}
+.spec-dl div strong {
+  font-family: var(--tech);
+  font-size: 13px;
+  color: var(--ink);
+}
+
+/* ══════════════════════════════════════════════════════════
+   PRINCIPAL ARCHITECTS // THE DUO (Olimaran & Ramya)
+   ══════════════════════════════════════════════════════════ */
+.duo-sec {
+  background: #ece8df;
+}
+.duo-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.duo-profile {
+  background: var(--paper-card);
+  border: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s ease, border-color 0.4s ease;
+}
+.duo-profile:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+.duo-media {
+  position: relative;
+  aspect-ratio: 3/4;
+  background: #e2ddd3;
+  overflow: hidden;
+}
+.duo-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  filter: saturate(0.9);
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.duo-profile:hover .duo-media img {
+  transform: scale(1.04);
+}
+.duo-cad-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(27, 35, 29, 0.85);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  padding: 4px 10px;
+}
+.duo-corner-cross {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: var(--accent);
+  border-style: solid;
+  opacity: 0.8;
+}
+.duo-corner-cross.tl { top: 10px; left: 10px; border-width: 1.5px 0 0 1.5px; }
+.duo-corner-cross.tr { top: 10px; right: 10px; border-width: 1.5px 1.5px 0 0; }
+.duo-corner-cross.bl { bottom: 10px; left: 10px; border-width: 0 0 1.5px 1.5px; }
+.duo-corner-cross.br { bottom: 10px; right: 10px; border-width: 0 1.5px 1.5px 0; }
+
+.duo-meta {
+  padding: 32px;
+  border-top: 1px solid var(--line);
+}
+.duo-role-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.duo-meta h3 {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+.duo-reg {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.duo-bio {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+.duo-disciplines {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.duo-disciplines span {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+}
+
+/* ══════════════════════════════════════════════════════════
+   SERVICES // CAPABILITIES MATRIX
+   ══════════════════════════════════════════════════════════ */
+.services-deck {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.svc-card {
+  background: var(--paper-card);
+  border: 1px solid var(--line);
+  padding: 32px;
+  position: relative;
+  transition: all 0.3s;
+}
+.svc-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+}
+.svc-idx {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--accent);
+  letter-spacing: 0.16em;
+}
+.svc-sym {
+  font-size: 34px;
+  margin: 20px 0 12px;
+  color: var(--sage);
+}
+.svc-card h3 {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.svc-card p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ══════════════════════════════════════════════════════════
+   KITCHEN WORKFLOW & MATERIAL VIEWER
+   ══════════════════════════════════════════════════════════ */
+.kitchen-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.k-panel {
+  background: var(--paper-card);
+  border: 1px solid var(--line);
+  padding: 34px;
+}
+.k-panel.dark {
+  background: var(--dark);
+  color: var(--paper);
+  border-color: var(--dark-border);
+}
+.k-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 18px 0;
+  flex-wrap: wrap;
+}
+.k-tab {
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: 8px 14px;
+  background: transparent;
+  border: 1px solid var(--line);
+  cursor: pointer;
+  color: inherit;
+}
+.k-panel.dark .k-tab { border-color: var(--dark-border); color: #c4d1c2; }
+.k-tab.active, .k-tab:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.k-display-box {
+  height: 240px;
+  background: #ded8cb;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.k-display-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.k-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-family: var(--mono);
+  font-size: 9px;
+  background: rgba(27,35,29,0.85);
+  color: #fff;
+  padding: 4px 8px;
+}
+
+/* ══════════════════════════════════════════════════════════
+   AESTHETIX 13-POINT QUALITY GUARANTEE TABLE
+   ══════════════════════════════════════════════════════════ */
+.guarantee-wrap {
+  border: 1px solid var(--line);
+  background: var(--paper-card);
+  padding: 40px;
+}
+.guarantee-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-top: 24px;
+}
+.guarantee-table th, .guarantee-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+.guarantee-table th {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.guarantee-table tr:hover {
+  background: rgba(182, 109, 75, 0.04);
+}
+.val-pill {
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: 3px 8px;
+  background: rgba(71, 88, 74, 0.12);
+  color: var(--sage);
+  display: inline-block;
+}
+
+/* ══════════════════════════════════════════════════════════
+   PROJECTS PORTFOLIO (Elevation Blueprints + Renderings)
+   ══════════════════════════════════════════════════════════ */
+.port-mosaic {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 0.8fr;
+  grid-template-rows: 270px 270px;
+  gap: 16px;
+}
+.port-card {
+  position: relative;
+  overflow: hidden;
+  background: #ded9cf;
+  border: 1px solid var(--line);
+}
+.port-card:first-child {
+  grid-row: span 2;
+}
+.port-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.port-card:hover img {
+  transform: scale(1.05);
+}
+.port-caption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 24px;
+  background: linear-gradient(transparent, rgba(23, 31, 25, 0.9));
+  color: #fff;
+}
+.port-caption small {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--accent-light);
+}
+.port-caption strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+/* ══════════════════════════════════════════════════════════
+   CONTACT & ENQUIRY TERMINAL
+   ══════════════════════════════════════════════════════════ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+.contact-terminal {
+  background: var(--paper-card);
+  border: 1px solid var(--line);
+  padding: 40px;
+}
+.form-line {
+  margin-bottom: 20px;
+}
+.form-line label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.form-input, .form-select, .form-area {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid var(--line);
+  background: #fff;
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.form-input:focus, .form-select:focus, .form-area:focus {
+  border-color: var(--accent);
+}
+.form-area { min-height: 90px; resize: vertical; }
+
+/* Footer */
+footer {
+  background: var(--dark);
+  color: #e5ece2;
+  padding: 60px 0 30px;
+  border-top: 1px solid var(--dark-border);
+}
+.f-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid var(--dark-border);
+}
+.f-col h4 {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: var(--accent-light);
+  margin-bottom: 16px;
+}
+.f-col ul { list-style: none; display: grid; gap: 10px; }
+.f-col a {
+  font-size: 12px;
+  color: #adb9ab;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.f-col a:hover { color: #fff; }
+.f-bot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  font-family: var(--mono);
+  font-size: 9px;
+  color: #798677;
+  letter-spacing: 0.14em;
+}
+
+/* Responsive Overrides */
+@media (max-width: 980px) {
+  .hero-sec { grid-template-columns: 1fr; padding-top: 40px; }
+  .hero-3d-box { max-height: 400px; }
+  .boq-shell { grid-template-columns: 1fr; }
+  .boq-controls { border-right: 0; border-bottom: 1px solid var(--dark-border); }
+  .floorplan-grid, .contact-grid, .duo-cards-grid { grid-template-columns: 1fr; }
+  .services-deck { grid-template-columns: 1fr 1fr; }
+  .port-mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .port-card:first-child { grid-row: auto; grid-column: span 2; height: 320px; }
+  .sec-head { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .nav-menu { display: none; }
+  .menu-toggle { display: block; }
+}
+@media (max-width: 600px) {
+  .services-deck, .tier-specs, .addon-matrix, .port-mosaic { grid-template-columns: 1fr; }
+  .port-card:first-child { grid-column: auto; height: 260px; }
+  .f-top { flex-direction: column; }
+  .hero-cad-specs { grid-template-columns: 1fr; }
+  .guarantee-wrap { padding: 20px 14px; overflow-x: auto; }
+}
 </style>
 </head>
+
 <body>
-<div class="topline">CHENNAI · ARCHITECTURE, INTERIORS & EXECUTION <span>— BUILT AROUND YOU</span></div>
-<header class="nav">
-<a class="brand" href="#home" aria-label="RAY home"><span class="brand-mark">R.</span><span><strong>RAY</strong><small>DESIGN & BUILD BY ARCHDUO</small></span></a>
-<nav class="navlinks" id="navlinks"><a href="#work">Projects</a><a href="#services">Services</a><a href="#estimate">Cost planner</a><a href="#process">Our process</a><a href="#why">Why RAY</a><a href="#contact">Contact</a></nav>
-<a class="nav-cta" href="#estimate">PLAN YOUR SPACE ↗</a><button class="menu" id="menu" aria-label="Open menu">☰</button>
+
+<!-- Live Blueprint Cursor -->
+<div id="crosshair"></div>
+<div id="ch-x"></div>
+<div id="ch-y"></div>
+
+<!-- Telemetry Stamp -->
+<div class="hud-stamp hud-tl">
+  <div><span class="hud-telemetry">RAY ARCHDUO</span> // CHENNAI STUDIO</div>
+  <div>COA REG: CA/2019/ARCHDUO · REV.26</div>
+</div>
+<div class="hud-stamp hud-br">
+  <div>COORD: <span class="hud-telemetry" id="coord-readout">X:000 Y:000</span></div>
+  <div>SCALE 1:50 · DWG NO. RAY-002</div>
+</div>
+
+<!-- Technical Topbar -->
+<div class="cad-topbar">
+  <div>CHENNAI · ARCHITECTURE, INTERIORS &amp; FACTORY JOINERY <span>— THE CONSIDERED BUILD</span></div>
+  <div>ESTIMATES UPDATED: <span>2026 BENCHMARK</span></div>
+</div>
+
+<!-- Primary Navigation -->
+<header class="nav-header">
+  <a href="#home" class="brand-group">
+    <div class="brand-cad-box">R.</div>
+    <div>
+      <strong class="brand-title">RAY DESIGN &amp; BUILD</strong>
+      <span class="brand-subtitle">BY ARCHDUO · ARCHITECTS</span>
+    </div>
+  </a>
+
+  <nav class="nav-menu" id="navMenu">
+    <a href="#about">Studio</a>
+    <a href="#estimator">Cost BOQ</a>
+    <a href="#floorplan">Blueprint</a>
+    <a href="#duo">The Duo</a>
+    <a href="#kitchen">Kitchens</a>
+    <a href="#guarantee">Standards</a>
+    <a href="#portfolio">Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <a href="#estimator" class="btn">Calculate Cost ↗</a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">☰</button>
 </header>
+
 <main id="home">
-<section class="hero wrap">
-<div class="hero-copy"><div class="eyebrow">01 / A considered way to build</div><h1>Spaces that<br>feel like <em>you.</em></h1><p class="lead">Architecture, interiors and execution — brought together with thoughtful design, honest conversations and details that make everyday life better.</p><div class="hero-actions"><a class="btn" href="#estimate">Explore your estimate <span>↗</span></a><a class="btn light" href="#work">See our approach <span>↓</span></a></div><div class="hero-stats"><div><strong>Design-led</strong><span>Every decision has a reason</span></div><div><strong>End-to-end</strong><span>One connected process</span></div><div><strong>Chennai</strong><span>Rooted in local living</span></div></div></div>
-<div class="hero-visual"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=90" alt="Warm contemporary living room interior"><div class="visual-overlay"></div><div class="visual-tag">RAY / 001<br>DESIGN · DETAIL · DELIVERY</div><div class="hero-note"><small>THE RAY POINT OF VIEW</small><strong>Good design lives in the details.</strong></div></div>
-</section>
-<div class="ticker"><div class="ticker-track"><span>ARCHITECTURE</span><span>✳</span><span>INTERIORS</span><span>✳</span><span>DESIGN & BUILD</span><span>✳</span><span>SPACES WITH PURPOSE</span><span>✳</span><span>ARCHITECTURE</span><span>✳</span><span>INTERIORS</span><span>✳</span></div></div>
-<section class="section wrap"><div class="intro-grid"><div><div class="eyebrow">02 / A little about us</div><h2>Not just how a space looks. How it <em>lives.</em></h2></div><div class="intro-body"><p>At RAY Design & Build by ARCHDUO, we bring architecture, interior design and execution into one considered journey. We believe a beautiful space should also be intuitive, durable and right for the people who use it.</p><p>From the first sketch to the final fitting, we connect the big picture with the small decisions — circulation, materials, light, storage, proportions and the way a room feels at the end of a long day.</p><div class="signature">Designed with intent. Built with care.</div></div></div></section>
-<section class="section estimate" id="estimate"><div class="wrap"><div class="section-head"><div><div class="eyebrow">03 / Your first numbers</div><h2>Price your space.<br><em>Before the meeting.</em></h2></div><p>Explore a starting estimate by home type, scope and finish. Adjust the sliders, add rooms and see the total change instantly — no phone number required.</p></div>
-<div class="estimator"><div class="est-left">
-<div class="step"><div class="step-num">01</div><div class="step-content"><h3>Choose your home</h3><p>We'll suggest a typical scope. You can change it below.</p><div class="choice-row" id="homeChoices"><button class="choice" data-home="1">1 BHK<small>Compact</small></button><button class="choice active" data-home="2">2 BHK<small>2 bedrooms</small></button><button class="choice" data-home="3">3 BHK<small>3 bedrooms</small></button><button class="choice" data-home="4">4 BHK<small>4 bedrooms</small></button><button class="choice" data-home="villa">Villa<small>Custom</small></button></div></div></div>
-<div class="step"><div class="step-num">02</div><div class="step-content"><h3>Choose your scope</h3><p>Start with a full home, a kitchen, or selected spaces.</p><div class="choice-row" id="scopeChoices"><button class="choice active" data-scope="full">Full home</button><button class="choice" data-scope="kitchen">Kitchen only</button><button class="choice" data-scope="kitchenward">Kitchen + wardrobes</button><button class="choice" data-scope="rooms">Selected rooms</button></div><div class="fieldline"><label for="area">Approx. built-up area</label><output id="areaOut">1,000 sq.ft</output></div><input class="range" type="range" id="area" min="450" max="3500" step="50" value="1000"><div class="range-scale"><span>450 sq.ft</span><span>3,500 sq.ft</span></div><div class="fieldline"><label for="rooms">Bedrooms included</label><output id="roomsOut">2 rooms</output></div><input class="range" type="range" id="rooms" min="1" max="6" step="1" value="2"><div class="range-scale"><span>1 bedroom</span><span>6 bedrooms</span></div></div></div>
-<div class="step"><div class="step-num">03</div><div class="step-content"><h3>Choose your finish</h3><p>Finishes and hardware have a real impact on the final number.</p><div class="choice-row" id="finishChoices"><button class="choice" data-finish="essential">Essential<small>Practical</small></button><button class="choice active" data-finish="premium">Premium<small>Balanced</small></button><button class="choice" data-finish="luxury">Luxury<small>Elevated</small></button></div><div class="fieldline"><label for="finishSlider">Finish level</label><output id="finishOut">Premium · 2/3</output></div><input class="range" type="range" id="finishSlider" min="1" max="3" step="1" value="2"><div class="range-scale"><span>Essential</span><span>Premium</span><span>Luxury</span></div></div></div>
-<div class="step"><div class="step-num">04</div><div class="step-content"><h3>Add optional work</h3><p>Select additional scopes to include in your estimate.</p><div class="scope-options">
-<label class="scope-option"><input type="checkbox" data-addon="ceiling" checked><span>False ceiling & lighting<small>Ceiling design, cove and basic lighting plan</small></span></label>
-<label class="scope-option"><input type="checkbox" data-addon="paint" checked><span>Painting & wall finish<small>Interior emulsion and selected feature wall</small></span></label>
-<label class="scope-option"><input type="checkbox" data-addon="electrical"><span>Electrical upgrades<small>Points, switches and lighting provisions</small></span></label>
-<label class="scope-option"><input type="checkbox" data-addon="flooring"><span>Flooring & skirting<small>Indicative allowance for selected areas</small></span></label>
-<label class="scope-option"><input type="checkbox" data-addon="civil"><span>Minor civil / renovation<small>Small changes; structural work excluded</small></span></label>
-<label class="scope-option"><input type="checkbox" data-addon="design" checked><span>Design & project coordination<small>Drawings, 3D views and site coordination</small></span></label>
-</div></div></div>
-</div><aside class="est-right"><div class="result-kicker">Your indicative starting estimate</div><div class="result-price" id="total">₹7,00,000 <span>+ GST if applicable</span></div><div class="result-caption" id="resultCaption">A working range for a 2 BHK with premium finishes. Measured quantities and final specifications will shape the formal BOQ.</div><div class="result-divider"></div><div class="breakdown" id="breakdown"></div><div class="result-divider"></div><div class="result-kicker">Included in this estimate</div><p class="result-caption" id="includedText">Modular kitchen, wardrobes, TV unit, shoe storage, ceiling, painting and design coordination.</p><p class="gst-note">Indicative planning estimate only — not a quotation. Actual pricing depends on site measurement, layout, materials, hardware, brands and final scope. GST, appliances, loose furniture and major structural/civil works are excluded unless specifically included in the written BOQ.</p><button class="btn" id="sendEstimate">Send this estimate to RAY ↗</button><div class="estimate-disclaimer">Your selections stay on this page. Nothing is sent until you choose to open an enquiry.</div></aside></div>
-</div></section>
-<section class="section wrap" id="services"><div class="section-head"><div><div class="eyebrow">04 / What we do</div><h2>One studio. Every layer<br>of your space.</h2></div><p>From the first plan to the last handle, the experience should feel connected. Choose one service or bring the whole project under one roof.</p></div><div class="cards3">
-<a class="service-card" href="#estimate"><span class="card-index">01 / RESIDENTIAL</span><div class="service-icon">⌂</div><h3>Full-home interiors</h3><p>Rooms that feel connected — kitchen, wardrobes, ceiling, lighting and finishes designed around everyday life.</p><div class="card-link"><span>DESIGN + EXECUTION</span><span>↗</span></div></a>
-<a class="service-card" href="#kitchen"><span class="card-index">02 / THE HEART OF HOME</span><div class="service-icon">▱</div><h3>Modular kitchens</h3><p>Layouts, storage, work zones and finishes that make cooking smoother and keep the visual language calm.</p><div class="card-link"><span>LAYOUT + JOINERY</span><span>↗</span></div></a>
-<a class="service-card" href="#estimate"><span class="card-index">03 / PERSONAL SPACE</span><div class="service-icon">▤</div><h3>Wardrobes & storage</h3><p>Purpose-built storage, dresser units, study corners and media walls, sized to the way you live.</p><div class="card-link"><span>MADE FOR YOUR PLAN</span><span>↗</span></div></a>
-<a class="service-card" href="#contact"><span class="card-index">04 / BUILT ENVIRONMENT</span><div class="service-icon">⌗</div><h3>Architecture</h3><p>Site-responsive planning, clear spatial concepts, elevations and architectural design from idea to detail.</p><div class="card-link"><span>CONCEPT TO DRAWINGS</span><span>↗</span></div></a>
-<a class="service-card" href="#contact"><span class="card-index">05 / WORK & COMMERCE</span><div class="service-icon">▥</div><h3>Commercial interiors</h3><p>Workspaces, studios and retail environments shaped around brand, circulation, comfort and performance.</p><div class="card-link"><span>WORKSPACES THAT WORK</span><span>↗</span></div></a>
-<a class="service-card" href="#contact"><span class="card-index">06 / SECOND LIFE</span><div class="service-icon">↻</div><h3>Renovation & build</h3><p>Thoughtful upgrades and execution coordination to make an existing space work better, not just look new.</p><div class="card-link"><span>DESIGN + BUILD</span><span>↗</span></div></a>
-</div></section>
-<section class="section portfolio" id="work"><div class="wrap"><div class="section-head"><div><div class="eyebrow">05 / Selected work</div><h2>Spaces with a point<br>of view.</h2></div><p>Every project begins with a different brief. The common thread is considered planning, material restraint and a clear relationship between form and function.</p></div><div class="portfolio-grid">
-<div class="project"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85" alt="Contemporary living and dining interior"><div class="proj-label"><small>RESIDENTIAL / CONCEPT</small><strong>Quiet warmth</strong><span>Living · Dining · Material palette</span></div></div>
-<div class="project"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=85" alt="Minimal living space"><div class="proj-label"><small>INTERIORS</small><strong>Soft geometry</strong><span>Light · Texture · Proportion</span></div></div>
-<div class="project"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=85" alt="Refined contemporary interior"><div class="proj-label"><small>DETAIL STUDY</small><strong>Material calm</strong><span>Wood · Stone · Warm neutrals</span></div></div>
-<div class="project"><div class="project-placeholder"><span>ARCHDUO / DESIGN STUDY</span><strong>Form follows feeling.</strong><span>PROJECT PHOTOGRAPHY TO BE ADDED</span></div><div class="proj-label"><small>ARCHITECTURE</small><strong>Made to belong</strong><span>Concept · Space · Structure</span></div></div>
-</div><p class="fineprint" style="color:var(--muted);margin-top:16px">Illustrative imagery is used for this preview. Replace with verified RAY / ARCHDUO project photographs before publishing.</p></div></section>
-<section class="section wrap" id="kitchen"><div class="section-head"><div><div class="eyebrow">06 / Kitchen, considered</div><h2>Good kitchens begin<br>with good flow.</h2></div><p>Choose a layout that suits the room, then balance storage, prep space, cooking and cleaning. The best-looking kitchen is one that works beautifully every day.</p></div><div class="compare"><div class="compare-panel"><div class="eyebrow">LAYOUT GUIDE / 01</div><h3>Find your kitchen shape.</h3><div class="choice-row" id="kitchenChoices"><button class="choice active" data-kitchen="L-shaped">L-shaped</button><button class="choice" data-kitchen="Parallel">Parallel</button><button class="choice" data-kitchen="U-shaped">U-shaped</button><button class="choice" data-kitchen="Island">Island</button></div><div class="compare-visual" style="margin-top:18px"><img id="kitchenImg" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85" alt="Modern kitchen interior"><div class="compare-label left" id="kitchenTag">L-SHAPED</div></div><h3 id="kitchenTitle" style="font-size:25px;margin:18px 0 8px">A versatile corner solution.</h3><p id="kitchenDesc" style="font-size:12px;color:var(--muted);line-height:1.8;margin:0">Uses two connected walls, keeping the centre open and making it a natural fit for compact and medium-sized homes.</p></div>
-<div class="compare-panel dark"><div class="eyebrow">FINISH GUIDE / 02</div><h3>See what changes the cost.</h3><div class="choice-row" id="kfinishChoices"><button class="choice active" data-kfinish="laminate">Laminate</button><button class="choice" data-kfinish="acrylic">Acrylic</button><button class="choice" data-kfinish="membrane">Membrane</button><button class="choice" data-kfinish="pu">PU finish</button></div><div class="compare-visual" style="margin-top:18px"><img id="finishImg" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85" alt="Kitchen finish reference"><div class="compare-label left" id="finishTag">LAMINATE</div></div><h3 id="finishTitle" style="font-size:25px;margin:18px 0 8px;color:var(--paper)">Everyday practical.</h3><p id="finishDesc" style="font-size:12px;color:#b9c1b6;line-height:1.8;margin:0">A versatile, cost-conscious option with a wide range of colours and textures. Final specification depends on substrate and hardware.</p></div></div></section>
-<section class="section process" id="process"><div class="wrap"><div class="section-head"><div><div class="eyebrow">07 / From idea to handover</div><h2>A clear process.<br>Fewer surprises.</h2></div><p>Good work depends on good decisions made in the right order. Each phase brings clarity before the next one begins.</p></div><div class="process-track">
-<div class="phase"><span class="num">01 / DISCOVER</span><h3>Brief</h3><p>Understand the site, the people, the lifestyle and the budget.</p><small>LISTEN FIRST</small></div>
-<div class="phase"><span class="num">02 / DEFINE</span><h3>Concept</h3><p>Explore layouts, spatial ideas, mood and material direction.</p><small>ALIGN THE VISION</small></div>
-<div class="phase"><span class="num">03 / DESIGN</span><h3>Visualise</h3><p>Develop drawings, 3D views, details and the project scope.</p><small>SEE BEFORE BUILD</small></div>
-<div class="phase"><span class="num">04 / DETAIL</span><h3>BOQ</h3><p>Confirm specifications, quantities, inclusions and exclusions.</p><small>WRITE IT DOWN</small></div>
-<div class="phase"><span class="num">05 / DELIVER</span><h3>Execute</h3><p>Coordinate trades, monitor progress and resolve site details.</p><small>BUILD WITH CARE</small></div>
-<div class="phase"><span class="num">06 / COMPLETE</span><h3>Handover</h3><p>Review the finished work, close snags and hand over documentation.</p><small>DETAILS MATTER</small></div>
-</div><div class="payment-strip"><div><div class="eyebrow">A transparent way to work</div><strong>Milestones and scope agreed before execution.</strong></div><div class="payment-splits"><span><b>01</b>Design stage</span><span><b>02</b>Production / site</span><span><b>03</b>Handover</span></div></div><p class="fineprint" style="color:#aeb8ad;margin-top:15px">Project durations and payment milestones are agreed individually in the signed proposal; the stages shown here describe our approach, not a guaranteed timeline.</p></div></section>
-<section class="section wrap" id="why"><div class="why-grid"><div><div class="eyebrow">08 / Why RAY</div><h2>Thoughtful by design. Clear by default.</h2><p class="intro">A good design-build experience should make the process easier to understand, the decisions easier to make and the finished space worth living in.</p><a class="btn" href="#contact">Let's discuss your project ↗</a></div><div class="pillar-list">
-<div class="pillar"><div class="n">01</div><div><h3>Design with a reason</h3><p>Every line, finish and feature should serve a spatial, practical or emotional purpose.</p></div></div>
-<div class="pillar"><div class="n">02</div><div><h3>Clear scope, clear conversation</h3><p>We work to make inclusions, exclusions, materials and costs understandable before execution.</p></div></div>
-<div class="pillar"><div class="n">03</div><div><h3>One connected journey</h3><p>Architecture, interiors and execution are coordinated so that the original idea carries through to the site.</p></div></div>
-<div class="pillar"><div class="n">04</div><div><h3>Materials that make sense</h3><p>We balance appearance, maintenance, durability and budget — not just what looks good in a render.</p></div></div>
-<div class="pillar"><div class="n">05</div><div><h3>People at the centre</h3><p>Your routines, priorities and feedback shape the design from the first conversation to handover.</p></div></div>
-</div></div></section>
-<section class="section wrap"><div class="section-head"><div><div class="eyebrow">09 / Material moodboard</div><h2>Three ways to set<br>the feeling.</h2></div><p>A starting point for conversation, not a fixed package. The final palette is selected around your brief, site light, maintenance needs and budget.</p></div><div class="finish-grid">
-<div class="finish-card"><div class="finish-image"></div><div class="finish-content"><div class="eyebrow">01 / ESSENTIAL</div><h3>Quietly practical</h3><p>Durable everyday surfaces, thoughtful storage and a calm, simple palette.</p><div class="rangeprice">VALUE-LED MATERIALS</div></div></div>
-<div class="finish-card"><div class="finish-image"></div><div class="finish-content"><div class="eyebrow">02 / PREMIUM</div><h3>Warm modern</h3><p>Layered textures, balanced contrast, better detailing and considered lighting.</p><div class="rangeprice">BALANCED SPECIFICATION</div></div></div>
-<div class="finish-card"><div class="finish-image"></div><div class="finish-content"><div class="eyebrow">03 / LUXURY</div><h3>Quiet statement</h3><p>Distinctive finishes, bespoke details and more expressive material combinations.</p><div class="rangeprice">BESPOKE FINISH DIRECTION</div></div></div>
-</div></section>
-<section class="section wrap"><div class="faq"><div><div class="eyebrow">10 / Good to know</div><h2>Questions before we begin.</h2><p style="color:var(--muted);font-size:13px;line-height:1.8">If your question is not here, tell us about your project and we'll help you understand the next step.</p></div><div class="faq-list">
-<details><summary>How accurate is the online estimate?</summary><p>It is an early planning guide, not a quotation. The final cost depends on measured quantities, layout, material and hardware choices, site conditions and the exact scope. We confirm the price in a written BOQ or proposal.</p></details>
-<details><summary>Can I plan only my modular kitchen?</summary><p>Yes. Select “Kitchen only” in the cost planner, then adjust your home size, finish level and optional work. A measured kitchen layout is needed for a formal quote.</p></details>
-<details><summary>What is the difference between essential, premium and luxury?</summary><p>These are broad finish directions, not universal material guarantees. The actual specification — board type, shutter finish, hardware, countertop and accessories — should be listed clearly in your proposal.</p></details>
-<details><summary>Does the estimate include GST and appliances?</summary><p>The displayed estimate excludes GST, appliances, loose furniture and major structural or civil work unless specifically included. Confirm tax treatment and inclusions in the final written quotation.</p></details>
-<details><summary>Do you work only in Chennai?</summary><p>RAY is based in Chennai. Project feasibility outside our usual service area depends on scope, location, timeline and site coordination needs; contact us to discuss your location.</p></details>
-<details><summary>What happens after I send an enquiry?</summary><p>We review the project brief, discuss the site and requirements, and agree on the next step. You can share a floor plan or reference images when you contact us.</p></details>
-</div></div></section>
-<section class="section contact" id="contact"><div class="wrap contact-grid"><div><div class="eyebrow">11 / Let's make it real</div><h2>Your space.<br>Your story.<br><em>Let's design it.</em></h2><p>Tell us what you are planning — a new home, a kitchen refresh, a renovation or a space for work. We’ll start with the right questions.</p><button class="btn" id="openContact">Start a conversation ↗</button></div><div class="contact-details"><div><small>Studio</small><strong>RAY Design & Build by ARCHDUO</strong></div><div><small>Based in</small><strong>Chennai, Tamil Nadu</strong></div><div><small>Services</small><strong>Architecture · Interiors · Execution</strong></div><div><small>Direct contact</small><strong>Use the enquiry form to add your official phone / email</strong></div></div></div></section>
+
+  <!-- ═══ 01: HERO SECTION WITH THREE.JS AXONOMETRIC ENGINE ═══ -->
+  <section class="wrap hero-sec">
+    <div class="hero-copy">
+      <div class="eyebrow">01 / ARCHITECTURAL RIGOR</div>
+      <h1>Spaces with<br><em>intent.</em> Built with<br>conviction.</h1>
+      <p class="hero-lead">We unite registered architects, in-house modular manufacturing, and rigorous on-site execution under one contract. Every millimeter drafted, every rupee accounted for.</p>
+      
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <a href="#estimator" class="btn">Build Your Estimate <span>↗</span></a>
+        <a href="#portfolio" class="btn btn-outline">Explore Drawings &amp; Spaces <span>↓</span></a>
+      </div>
+
+      <div class="hero-cad-specs">
+        <div class="h-spec-item">
+          <strong>100% Architect-Led</strong>
+          <span>Olimaran &amp; Ramya on every brief</span>
+        </div>
+        <div class="h-spec-item">
+          <strong>Direct Factory</strong>
+          <span>Purified carcass &amp; Blum hardware</span>
+        </div>
+        <div class="h-spec-item">
+          <strong>Zero Escalation</strong>
+          <span>Signed line-item BOQ guarantee</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-3d-box">
+      <div class="cad-wire-tag">LIVE 3D AXONOMETRIC ROOM // DRAG TO ROTATE</div>
+      <canvas id="hero3d"></canvas>
+      <div class="cad-axis-ind">AXIS: X/Y/Z · 1:25 SPATIAL MASS</div>
+    </div>
+  </section>
+
+  <!-- Architectural Ticker -->
+  <div class="arch-ticker">
+    <div class="ticker-content">
+      <div>ARCHITECTURE <span>//</span> INTERIOR DESIGN <span>//</span> MODULAR KITCHENS <span>//</span> TURNKEY EXECUTION <span>//</span> 15-YEAR HARDWARE WARRANTY <span>//</span> 45-DAY HANDOVER <span>//</span> CHENNAI &amp; BENGALURU <span>//</span> ARCHDUO STUDIO</div>
+      <div>ARCHITECTURE <span>//</span> INTERIOR DESIGN <span>//</span> MODULAR KITCHENS <span>//</span> TURNKEY EXECUTION <span>//</span> 15-YEAR HARDWARE WARRANTY <span>//</span> 45-DAY HANDOVER <span>//</span> CHENNAI &amp; BENGALURU <span>//</span> ARCHDUO STUDIO</div>
+    </div>
+  </div>
+
+  <!-- ═══ 02: AESTHETIX-GRADE INTERACTIVE COST ESTIMATOR ═══ -->
+  <section class="section-pad estimator-sec" id="estimator">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">02 / TRANSPARENT PRICING</div>
+          <h2>Interactive BOQ<br><em>Cost Planner.</em></h2>
+        </div>
+        <p>Benchmark your home interior cost across real Chennai rates. No phone number gate. Based on verified modular factory rates and AesthetiX line-item standards.</p>
+      </div>
+
+      <div class="boq-shell">
+        <div class="boq-controls">
+
+          <!-- Step 1: Home Layout -->
+          <div class="boq-step">
+            <div class="b-step-head">
+              <span class="b-num">01</span>
+              <h3>Select Floor Plan Typology</h3>
+            </div>
+            <div class="boq-pills" id="homePills">
+              <button class="b-pill" data-home="1">1 BHK<small>~550 sq.ft</small></button>
+              <button class="b-pill active" data-home="2">2 BHK<small>~1,050 sq.ft</small></button>
+              <button class="b-pill" data-home="3">3 BHK<small>~1,500 sq.ft</small></button>
+              <button class="b-pill" data-home="4">4 BHK<small>~2,100 sq.ft</small></button>
+              <button class="b-pill" data-home="villa">Villa / Duplex<small>~3,200 sq.ft</small></button>
+            </div>
+          </div>
+
+          <!-- Step 2: Scope -->
+          <div class="boq-step">
+            <div class="b-step-head">
+              <span class="b-num">02</span>
+              <h3>Execution Scope</h3>
+            </div>
+            <div class="boq-pills" id="scopePills">
+              <button class="b-pill active" data-scope="full">Full-Home Complete</button>
+              <button class="b-pill" data-scope="kitchen">Kitchen Only</button>
+              <button class="b-pill" data-scope="kitchenward">Kitchen + Wardrobes</button>
+              <button class="b-pill" data-scope="shell">Design &amp; Renovation</button>
+            </div>
+
+            <div class="field-header">
+              <label for="areaInput">Carpet / Built-Up Area</label>
+              <output id="areaVal">1,050 sq.ft</output>
+            </div>
+            <input type="range" class="range-slider" id="areaInput" min="450" max="4200" step="50" value="1050">
+            <div class="scale-bounds"><span>450 sq.ft</span><span>4,200 sq.ft</span></div>
+
+            <div class="field-header" style="margin-top:20px;">
+              <label for="roomInput">Number of Bedrooms Included</label>
+              <output id="roomVal">2 Bedrooms</output>
+            </div>
+            <input type="range" class="range-slider" id="roomInput" min="1" max="6" step="1" value="2">
+            <div class="scale-bounds"><span>1 Bedroom</span><span>6 Bedrooms</span></div>
+          </div>
+
+          <!-- Step 3: Material Specification Standards -->
+          <div class="boq-step">
+            <div class="b-step-head">
+              <span class="b-num">03</span>
+              <h3>Material Standard (AesthetiX Baseline)</h3>
+            </div>
+            <div class="tier-specs" id="tierGrid">
+              <div class="t-card" data-tier="1">
+                <strong class="t-title">Essential</strong>
+                <div class="t-rate">₹1,750 / sq.ft joinery</div>
+                <ul class="t-list">
+                  <li>MR Grade Plywood</li>
+                  <li>0.8mm Matte Laminates</li>
+                  <li>Ebco Soft-close Hinges</li>
+                </ul>
+              </div>
+              <div class="t-card active" data-tier="2">
+                <strong class="t-title">Premium (Recommended)</strong>
+                <div class="t-rate">₹2,180 / sq.ft joinery</div>
+                <ul class="t-list">
+                  <li>IS:710 BWP Marine Plywood</li>
+                  <li>1.0mm Anti-fingerprint / Acrylic</li>
+                  <li>Blum / Hettich Hardware</li>
+                </ul>
+              </div>
+              <div class="t-card" data-tier="3">
+                <strong class="t-title">Luxury Bespoke</strong>
+                <div class="t-rate">₹2,950 / sq.ft joinery</div>
+                <ul class="t-list">
+                  <li>HDHMR &amp; Calibrated Birch</li>
+                  <li>PU Lacquer &amp; Natural Veneer</li>
+                  <li>Servo-Drive Motorized Blum</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4: Optional Add-ons -->
+          <div class="boq-step">
+            <div class="b-step-head">
+              <span class="b-num">04</span>
+              <h3>Allied Civil &amp; Interior Works</h3>
+            </div>
+            <div class="addon-matrix">
+              <label class="add-label">
+                <input type="checkbox" data-addon="ceiling" checked>
+                <div>
+                  <strong>False Ceiling &amp; Cove Lights</strong>
+                  <small>Saint-Gobain Gyproc + Philips/Cobia LED</small>
+                </div>
+              </label>
+              <label class="add-label">
+                <input type="checkbox" data-addon="paint" checked>
+                <div>
+                  <strong>Painting &amp; Feature Textures</strong>
+                  <small>Asian Paints Royale Luxury Emulsion</small>
+                </div>
+              </label>
+              <label class="add-label">
+                <input type="checkbox" data-addon="electrical">
+                <div>
+                  <strong>Electrical &amp; Light Automation</strong>
+                  <small>Schneider/Legrand modular switches &amp; cabling</small>
+                </div>
+              </label>
+              <label class="add-label">
+                <input type="checkbox" data-addon="flooring">
+                <div>
+                  <strong>Flooring / Tile Overlay</strong>
+                  <small>Kajaria / Somany GVT vitrified slabs</small>
+                </div>
+              </label>
+              <label class="add-label">
+                <input type="checkbox" data-addon="civil">
+                <div>
+                  <strong>Civil Alteration &amp; Plumbing</strong>
+                  <small>Wet area modifications &amp; granite sill work</small>
+                </div>
+              </label>
+              <label class="add-label">
+                <input type="checkbox" data-addon="arch" checked>
+                <div>
+                  <strong>Architectural Planning &amp; 3D</strong>
+                  <small>Olimaran &amp; Ramya detailed site coordination</small>
+                </div>
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Side: Real-Time Dynamic BOQ -->
+        <div class="boq-summary">
+          <div class="summary-kicker">DOC REF: BOQ-EST-2026 // LIVE AUDIT</div>
+          <div class="live-total-price" id="grandTotal">₹7,45,000</div>
+          <div class="boq-notes" id="boqCaption">
+            Detailed estimate range for 2 BHK with Premium BWP Marine Ply &amp; Blum hardware. Includes modular joinery, false ceiling, and painting.
+          </div>
+
+          <div class="boq-line-items" id="boqLines">
+            <!-- Injected by JavaScript -->
+          </div>
+
+          <div class="aesthetix-guarantee-badge">
+            <strong>THE ARCHDUO / RAY ZERO-SURPRISE PLEDGE</strong>
+            Written penalty of ₹1,500/day for handover delays. 15-year warranty on Blum/Hettich hinges. Calibrated factory-pressed edge bands.
+          </div>
+
+          <button class="btn" id="btnShareBOQ" style="width:100%; margin-top: auto;">Send BOQ to Studio ↗</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 03: INTERACTIVE BLUEPRINT FLOOR PLAN ═══ -->
+  <section class="section-pad" id="floorplan">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">03 / ARCHITECTURAL DRAFTING</div>
+          <h2>Interactive Floor Plan.<br><em>Touch Every Room.</em></h2>
+        </div>
+        <p>A considered home is not decorated — it is zoned. Click any zone on the technical drafting sheet to inspect our circulation layout, daylight angles, and joinery provisions.</p>
+      </div>
+
+      <div class="floorplan-grid">
+        <div class="cad-plan-viewer">
+          <svg viewBox="0 0 600 450">
+            <!-- Background grid lines -->
+            <defs>
+              <pattern id="smallGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(27,35,29,0.06)" stroke-width="0.5"/>
+              </pattern>
+            </defs>
+            <rect width="600" height="450" fill="url(#smallGrid)" />
+
+            <!-- Dimension Leader Lines -->
+            <line x1="40" y1="20" x2="560" y2="20" stroke="#b66d4b" stroke-width="1" stroke-dasharray="3 3"/>
+            <text x="300" y="16" font-family="DM Mono" font-size="8" fill="#b66d4b" text-anchor="middle">|← 12,800 MM OVERALL SPAN →|</text>
+
+            <!-- Room 1: Living & Dining -->
+            <rect class="fp-interactive-room active" id="room-living" x="40" y="40" width="260" height="220" />
+            <text x="170" y="145" font-family="Space Grotesk" font-weight="600" font-size="12" fill="#1b231d" text-anchor="middle">01 / LIVING &amp; DINING</text>
+            <text x="170" y="162" font-family="DM Mono" font-size="9" fill="#677168" text-anchor="middle">5200 × 4400 mm</text>
+
+            <!-- Room 2: Modular Kitchen -->
+            <rect class="fp-interactive-room" id="room-kitchen" x="310" y="40" width="250" height="150" />
+            <text x="435" y="110" font-family="Space Grotesk" font-weight="600" font-size="12" fill="#1b231d" text-anchor="middle">02 / MODULAR KITCHEN</text>
+            <text x="435" y="125" font-family="DM Mono" font-size="9" fill="#677168" text-anchor="middle">3800 × 3000 mm (Parallel)</text>
+
+            <!-- Room 3: Master Bedroom Suite -->
+            <rect class="fp-interactive-room" id="room-master" x="310" y="200" width="250" height="210" />
+            <text x="435" y="300" font-family="Space Grotesk" font-weight="600" font-size="12" fill="#1b231d" text-anchor="middle">03 / MASTER SUITE</text>
+            <text x="435" y="315" font-family="DM Mono" font-size="9" fill="#677168" text-anchor="middle">4200 × 3600 mm + Dresser</text>
+
+            <!-- Room 4: Guest / Study -->
+            <rect class="fp-interactive-room" id="room-study" x="40" y="270" width="260" height="140" />
+            <text x="170" y="335" font-family="Space Grotesk" font-weight="600" font-size="12" fill="#1b231d" text-anchor="middle">04 / STUDY &amp; BEDROOM 2</text>
+            <text x="170" y="350" font-family="DM Mono" font-size="9" fill="#677168" text-anchor="middle">3600 × 3200 mm</text>
+          </svg>
+        </div>
+
+        <div class="plan-detail-card" id="planDetailCard">
+          <div class="eyebrow" id="fpZoneCode">ZONE 01 / LIVING &amp; FOYER</div>
+          <h3 id="fpZoneTitle">Cross-Ventilated Living &amp; Dining</h3>
+          <p id="fpZoneDesc">Configured to welcome northern ambient light with uninterrupted line of sight from the entrance foyer to the deck. Includes concealed AC pelmet and acoustically baffled media wall.</p>
+
+          <div class="spec-dl">
+            <div>
+              <small>PRIMARY FINISH</small>
+              <strong id="fpSpecFinish">American Walnut &amp; Fluted Lime</strong>
+            </div>
+            <div>
+              <small>HARDWARE STANDARD</small>
+              <strong id="fpSpecHardware">Hafele Soft Stop Concealed</strong>
+            </div>
+            <div>
+              <small>LIGHTING LUX</small>
+              <strong id="fpSpecLux">220 Lux Warm (3000K)</strong>
+            </div>
+            <div>
+              <small>JOINERY VOLUME</small>
+              <strong id="fpSpecVolume">160 sq.ft Modular Area</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 04: THE DUO // PRINCIPAL ARCHITECTS (Olimaran & Ramya) ═══ -->
+  <section class="section-pad duo-sec" id="duo">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">04 / STUDIO LEADERSHIP</div>
+          <h2>Meet <em>The Duo.</em><br>Two Minds. One Intent.</h2>
+        </div>
+        <p>We do not delegate your design to junior interns. Every project from initial sketch to final snag audit is directed personally by the two founding partners.</p>
+      </div>
+
+      <div class="duo-cards-grid">
+        <!-- Olimaran -->
+        <div class="duo-profile">
+          <div class="duo-media">
+            <div class="duo-cad-tag">PARTNER // 01 · DESIGN STRATEGY</div>
+            <div class="duo-corner-cross tl"></div>
+            <div class="duo-corner-cross tr"></div>
+            <div class="duo-corner-cross bl"></div>
+            <div class="duo-corner-cross br"></div>
+            <img src="https://raw.githubusercontent.com/olimaran08/rayoriginal/main/architect1.png" alt="Ar. Olimaran R — Principal Architect ARCHDUO" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80'">
+          </div>
+          <div class="duo-meta">
+            <span class="duo-role-badge">Principal Architect · Co-Founder</span>
+            <h3>Ar. Olimaran R</h3>
+            <div class="duo-reg">
+              <span>M.Arch (Architectural Design)</span>
+              <span>•</span>
+              <span>COA Registered</span>
+            </div>
+            <p class="duo-bio">Leads spatial tectonics, 3D parametric visualization, structural interfaces, and factory joinery execution. Passionate about AI-assisted drafting and uncompromising technical precision on site.</p>
+            <div class="duo-disciplines">
+              <span>3D Visualization</span>
+              <span>Factory CNC Detailing</span>
+              <span>Structural Coordination</span>
+              <span>AI Spatial Design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ramya -->
+        <div class="duo-profile">
+          <div class="duo-media">
+            <div class="duo-cad-tag">PARTNER // 02 · MATERIAL CURATION</div>
+            <div class="duo-corner-cross tl"></div>
+            <div class="duo-corner-cross tr"></div>
+            <div class="duo-corner-cross bl"></div>
+            <div class="duo-corner-cross br"></div>
+            <img src="https://raw.githubusercontent.com/olimaran08/rayoriginal/main/architect2.png" alt="Ar. Ramya D — Principal Architect ARCHDUO" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80'">
+          </div>
+          <div class="duo-meta">
+            <span class="duo-role-badge">Principal Architect · Co-Founder</span>
+            <h3>Ar. Ramya D</h3>
+            <div class="duo-reg">
+              <span>M.Arch (Interior &amp; Sustainable Design)</span>
+              <span>•</span>
+              <span>COA Registered</span>
+            </div>
+            <p class="duo-bio">Drives tactile material curation, lighting choreography, ergonomic flow, and end-to-end client consultation. Brings warmth, natural stone harmony, and lived-in elegance to every residence.</p>
+            <div class="duo-disciplines">
+              <span>Material Harmony</span>
+              <span>Lighting Design</span>
+              <span>Ergonomic Flow</span>
+              <span>Client Consultation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 05: KITCHEN WORKFLOW & MATERIAL COMPARISON ═══ -->
+  <section class="section-pad" id="kitchen">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">05 / CULINARY ERGONOMICS</div>
+          <h2>The Work Triangle,<br><em>Engineered.</em></h2>
+        </div>
+        <p>A great kitchen is not about surface gloss; it is about transit efficiency between sink, hob, and cold storage. Compare layouts and finishes below.</p>
+      </div>
+
+      <div class="kitchen-split">
+        <div class="k-panel">
+          <div class="eyebrow">01 // LAYOUT FLOW</div>
+          <h3 style="font-family:var(--serif); font-size:26px; margin: 10px 0;">Select Kitchen Geometry</h3>
+          <div class="k-tabs" id="kLayoutTabs">
+            <button class="k-tab active" data-kl="lshape">L-Shaped</button>
+            <button class="k-tab" data-kl="parallel">Parallel / Galley</button>
+            <button class="k-tab" data-kl="ushape">U-Shaped</button>
+            <button class="k-tab" data-kl="island">Chef Island</button>
+          </div>
+          <div class="k-display-box">
+            <div class="k-badge" id="klBadge">L-SHAPED // CORNER MAXIMIZER</div>
+            <img id="klImg" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Modular Kitchen Layout">
+          </div>
+          <h4 id="klTitle" style="font-family:var(--tech); font-size:18px; margin-bottom:6px;">Smart Corner Transit</h4>
+          <p id="klDesc" style="font-size:13px; color:var(--muted); line-height:1.7;">Ideal for open living concepts. Frees up central floor space while creating a compact, fatigue-free prep-to-cook triangle.</p>
+        </div>
+
+        <div class="k-panel dark">
+          <div class="eyebrow" style="color:var(--accent-light);">02 // SHUTTER SURFACE</div>
+          <h3 style="font-family:var(--serif); font-size:26px; margin: 10px 0; color:#fff;">Finish Longevity Guide</h3>
+          <div class="k-tabs" id="kFinishTabs">
+            <button class="k-tab active" data-kf="lam">Matte Laminate</button>
+            <button class="k-tab" data-kf="acryl">Seamless Acrylic</button>
+            <button class="k-tab" data-kf="pu">Bespoke PU</button>
+            <button class="k-tab" data-kf="fluted">Fluted Profile</button>
+          </div>
+          <div class="k-display-box">
+            <div class="k-badge" id="kfBadge">HIGH-PRESSURE 1MM LAMINATE</div>
+            <img id="kfImg" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" alt="Cabinet Finish Preview">
+          </div>
+          <h4 id="kfTitle" style="font-family:var(--tech); font-size:18px; margin-bottom:6px; color:#fff;">Zero-Grit Matte Laminate</h4>
+          <p id="kfDesc" style="font-size:13px; color:#a9b8a7; line-height:1.7;">Hot-pressed under 100 bar pressure with PUR water-resistant edge bands. Highly scratch-proof, budget resilient, and impervious to daily Indian spice heat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 06: AESTHETIX 13-POINT QUALITY STANDARDS BENCHMARK ═══ -->
+  <section class="section-pad" id="guarantee">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">06 / SPECIFICATION BENCHMARK</div>
+          <h2>How We Build vs.<br><em>Typical Market Practice.</em></h2>
+        </div>
+        <p>Inspired by the transparent material disclosures of top European &amp; AesthetiX standards. What is hidden behind the laminate determines whether a cabinet lasts 3 years or 30.</p>
+      </div>
+
+      <div class="guarantee-wrap">
+        <table class="guarantee-table">
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>RAY / ARCHDUO Standard</th>
+              <th>Local Carpenter / Generic Firm</th>
+              <th>Longevity Impact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Carcass Substrate</strong></td>
+              <td>Century Club Prime 100% BWP Marine Ply (IS:710)</td>
+              <td>Commercial MR Ply / Particle Board</td>
+              <td><span class="val-pill">Zero Borer / 30-Yr Water Proof</span></td>
+            </tr>
+            <tr>
+              <td><strong>Edge Band Adhesive</strong></td>
+              <td>PUR Polyurethane Machine Bonding (Zero glue-line)</td>
+              <td>Manual Fevicol / Local contact glue</td>
+              <td><span class="val-pill">Never peels from stove steam</span></td>
+            </tr>
+            <tr>
+              <td><strong>Hardware &amp; Runners</strong></td>
+              <td>Blum Tandembox &amp; Hettich Sensys Soft-close</td>
+              <td>Unbranded local soft-close</td>
+              <td><span class="val-pill">Tested for 200,000 cycles</span></td>
+            </tr>
+            <tr>
+              <td><strong>Backing Panel</strong></td>
+              <td>8mm Both-sides Laminated Marine Plywood</td>
+              <td>3mm raw MDF / Commercial ply</td>
+              <td><span class="val-pill">Prevents wall moisture transfer</span></td>
+            </tr>
+            <tr>
+              <td><strong>Handover Delay Policy</strong></td>
+              <td>Written ₹1,500/day penalty paid directly to client</td>
+              <td>Verbal assurances / endless postponements</td>
+              <td><span class="val-pill">Signed BOQ Calendar Guarantee</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 07: SELECTED WORK & PROJECT MOSAIC ═══ -->
+  <section class="section-pad" id="portfolio" style="background:#f2ede3;">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">07 / ARCHDUO ARCHIVE</div>
+          <h2>Selected Works &amp;<br><em>Built Artifacts.</em></h2>
+        </div>
+        <p>A portfolio spanning high-density residential penthouses in Anna Nagar, bespoke villas in ECR Chennai, and modern minimal apartments.</p>
+      </div>
+
+      <div class="port-mosaic">
+        <div class="port-card">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85" alt="The Sanctuary Penthouse">
+          <div class="port-caption">
+            <small>RESIDENTIAL // CHENNAI 2025</small>
+            <strong>The Sanctuary Penthouse</strong>
+            <span>3,400 sq.ft Complete Architecture &amp; Interiors</span>
+          </div>
+        </div>
+
+        <div class="port-card">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=85" alt="Monolith Modular Kitchen">
+          <div class="port-caption">
+            <small>JOINERY // KILPAUK</small>
+            <strong>Monolith Parallel Kitchen</strong>
+            <span>Fluted Quartz &amp; Dark Oak</span>
+          </div>
+        </div>
+
+        <div class="port-card">
+          <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=85" alt="Master Suite Minimal">
+          <div class="port-caption">
+            <small>BEDROOM // BESANT NAGAR</small>
+            <strong>Loom Master Suite</strong>
+            <span>Integrated Walk-in Wardrobe</span>
+          </div>
+        </div>
+
+        <div class="port-card">
+          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=85" alt="Studio ARCHDUO">
+          <div class="port-caption">
+            <small>COMMERCIAL // ALWARPET</small>
+            <strong>Studio Workroom</strong>
+            <span>Acoustic Panels &amp; Raw Concrete</span>
+          </div>
+        </div>
+
+        <div class="port-card">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=85" alt="ECR Coastal Villa">
+          <div class="port-caption">
+            <small>VILLA // ECR CHENNAI</small>
+            <strong>Coastal Courtyard House</strong>
+            <span>Turnkey Civil Build &amp; Interiors</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 08: DIRECT CONTACT & ENQUIRY TERMINAL ═══ -->
+  <section class="section-pad" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <div class="eyebrow">08 / INITIATE CONVERSATION</div>
+        <h2 style="font-family:var(--serif); font-size:clamp(40px, 5vw, 76px); font-weight:400; line-height:1; margin:16px 0 24px;">
+          Your space.<br>Our drafting board.<br><em>Let's create.</em>
+        </h2>
+        <p style="font-size:15px; color:var(--muted); line-height:1.8; max-width:480px; margin-bottom:34px;">
+          Share your floor plan or schedule an initial design alignment with Ar. Olimaran and Ar. Ramya. We review room dimensions, structural possibilities, and budget frameworks.
+        </p>
+
+        <div style="border-left: 2px solid var(--accent); padding-left: 20px; display: grid; gap: 14px;">
+          <div>
+            <div style="font-family:var(--mono); font-size:9px; letter-spacing:0.18em; color:var(--accent);">STUDIO LOCATION</div>
+            <strong style="font-size:14px;">Chennai, Tamil Nadu &amp; Bengaluru Hub</strong>
+          </div>
+          <div>
+            <div style="font-family:var(--mono); font-size:9px; letter-spacing:0.18em; color:var(--accent);">DIRECT COMMUNICATIONS</div>
+            <strong style="font-size:14px;"><a href="mailto:info@raydesignbuild.in" style="color:inherit; text-decoration:none;">info@raydesignbuild.in</a></strong>
+          </div>
+          <div>
+            <div style="font-family:var(--mono); font-size:9px; letter-spacing:0.18em; color:var(--accent);">INSTAGRAM ARCHIVE</div>
+            <strong style="font-size:14px;"><a href="https://instagram.com/TheArchDuo" target="_blank" style="color:inherit; text-decoration:none;">@TheArchDuo</a></strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-terminal">
+        <div class="eyebrow" style="margin-bottom:12px;">CLIENT BRIEF SUBMISSION</div>
+        <form id="projectInquiryForm">
+          <div class="form-line">
+            <label for="cName">Your Name *</label>
+            <input type="text" id="cName" class="form-input" placeholder="e.g. Anand Sundaram" required>
+          </div>
+          <div class="form-line">
+            <label for="cPhone">Phone / WhatsApp *</label>
+            <input type="tel" id="cPhone" class="form-input" placeholder="+91 98400 00000" required>
+          </div>
+          <div class="form-line">
+            <label for="cType">Project Typology</label>
+            <select id="cType" class="form-select">
+              <option value="Full Residential Interiors">Full Residential Interiors (Turnkey)</option>
+              <option value="Modular Kitchen & Wardrobes">Modular Kitchen &amp; Wardrobes</option>
+              <option value="Complete Architecture & Build">Complete Architecture &amp; Construction</option>
+              <option value="Commercial Workspace">Commercial / Boutique Workspace</option>
+            </select>
+          </div>
+          <div class="form-line">
+            <label for="cBrief">Project Location, Area &amp; Key Priorities</label>
+            <textarea id="cBrief" class="form-area" placeholder="e.g. 3 BHK in OMR Chennai, ~1600 sq.ft, keys handover in 2 months..."></textarea>
+          </div>
+          <button type="submit" class="btn" style="width:100%;">Transmit Enquiry to ArchDuo ↗</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
 </main>
-<footer><div class="wrap"><div class="footer-top"><div><a class="brand" href="#home"><span class="brand-mark">R.</span><span><strong style="color:#f3eee2">RAY</strong><small style="color:#aeb8ad">DESIGN & BUILD BY ARCHDUO</small></span></a><p>Architecture, interiors and execution shaped around people, place and purpose. Designed with intent. Built with care.</p></div><div class="footer-links"><div><strong>EXPLORE</strong><a href="#work">Projects</a><a href="#services">Services</a><a href="#estimate">Cost planner</a><a href="#process">Our process</a></div><div><strong>START HERE</strong><a href="#why">Why RAY</a><a href="#kitchen">Kitchen guide</a><a href="#contact">Contact</a><a href="#home">Back to top ↑</a></div></div></div><div class="footer-bottom"><span>© <span id="year"></span> RAY DESIGN & BUILD BY ARCHDUO</span><span>CHENNAI · MADE WITH INTENTION</span></div></div></footer>
-<div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-box"><button class="modal-close" id="closeModal" aria-label="Close">×</button><div class="eyebrow">RAY / ENQUIRY</div><h3 id="modalTitle">Tell us what you're planning.</h3><p>Your details will be used to prepare an enquiry draft that you can send from your email app. This preview does not transmit or store your information.</p><form class="formgrid" id="enquiryForm"><input id="clientName" required placeholder="Your name"><input id="clientPhone" placeholder="Phone number"><input id="clientEmail" type="email" placeholder="Email (optional)"><select id="clientType"><option>Full home interiors</option><option>Modular kitchen</option><option>Architecture</option><option>Commercial interiors</option><option>Renovation / design & build</option><option>Other</option></select><textarea id="clientBrief" placeholder="Location, home type, budget, timeline or anything we should know"></textarea><button class="btn" type="submit">Prepare enquiry email ↗</button><p class="fineprint">Before launch, replace the placeholder email/contact details with RAY’s official contact information and connect this form to your preferred lead system if you want direct submissions.</p></form></div></div>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+          <div class="brand-cad-box" style="border-color:var(--accent-light); color:var(--accent-light);">R.</div>
+          <strong style="font-family:var(--tech); font-size:18px; letter-spacing:0.1em; color:#fff;">RAY DESIGN &amp; BUILD</strong>
+        </div>
+        <p style="font-size:12px; color:#95a392; max-width:320px; line-height:1.7;">
+          Architecture, interior environments, and factory joinery crafted with architectural intent by ARCHDUO.
+        </p>
+      </div>
+
+      <div class="f-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#about">Studio Philosophy</a></li>
+          <li><a href="#estimator">Cost BOQ Planner</a></li>
+          <li><a href="#floorplan">Blueprint Viewer</a></li>
+          <li><a href="#duo">The Duo (Olimaran &amp; Ramya)</a></li>
+        </ul>
+      </div>
+
+      <div class="f-col">
+        <h4>Standards</h4>
+        <ul>
+          <li><a href="#kitchen">Kitchen Ergonomics</a></li>
+          <li><a href="#guarantee">AesthetiX Benchmark</a></li>
+          <li><a href="#portfolio">Project Portfolio</a></li>
+          <li><a href="#contact">Direct Consultation</a></li>
+        </ul>
+      </div>
+
+      <div class="f-col">
+        <h4>Studio Locations</h4>
+        <ul>
+          <li><span style="font-size:12px; color:#adb9ab;">Chennai: Anna Nagar &amp; OMR</span></li>
+          <li><span style="font-size:12px; color:#adb9ab;">Bengaluru: Whitefield Hub</span></li>
+          <li><a href="mailto:info@raydesignbuild.in">info@raydesignbuild.in</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="f-bot">
+      <span>© <span id="fYear"></span> RAY DESIGN &amp; BUILD BY ARCHDUO. ALL RIGHTS RESERVED.</span>
+      <span>DWG NO: RAY-ARCH-2026 // RELEASE 04</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════════════════════
+     JAVASCRIPT LOGIC ENGINE
+     ══════════════════════════════════════════════════════════ -->
 <script>
-const money=n=>'₹'+Math.round(n).toLocaleString('en-IN');
-const state={home:2,scope:'full',finish:2,area:1000,rooms:2,kitchen:'L-shaped',kfinish:'laminate'};
-const finishNames={1:'Essential',2:'Premium',3:'Luxury'};
-const multipliers={1:.82,2:1,3:1.32};
-const addonRates={ceiling:145,paint:42,electrical:55,flooring:125,civil:85,design:0.075};
-const addonLabels={ceiling:'False ceiling & lighting',paint:'Painting & wall finish',electrical:'Electrical upgrades',flooring:'Flooring & skirting',civil:'Minor civil / renovation',design:'Design & project coordination'};
-const checked=key=>document.querySelector(`[data-addon="${key}"]`).checked;
-function calc(){
- const mult=multipliers[state.finish], area=state.area, rooms=state.rooms;
- let kitchen=0,wardrobes=0,tv=0,shoe=0,study=0,addons=0;
- if(state.scope==='full'||state.scope==='kitchen'||state.scope==='kitchenward') kitchen=Math.max(55000, (state.scope==='kitchen'?Math.min(area*.18,260):Math.min(area*.18,260))*1450*mult);
- if(state.scope==='full'||state.scope==='kitchenward'||state.scope==='rooms') wardrobes=rooms* Math.max(45000,Math.min(area*.075,100))*1150*mult;
- if(state.scope==='full'||state.scope==='rooms'){tv=38000*mult;shoe=19000*mult;study=28000*mult}
- if(state.scope==='kitchen') {wardrobes=0;tv=0;shoe=0;study=0}
- if(state.scope==='kitchenward'){tv=0;shoe=0;study=0}
- if(state.scope==='rooms'){kitchen=0}
- const surfaceArea=state.scope==='kitchen'?Math.max(60,area*.18):area;
- ['ceiling','paint','electrical','flooring','civil'].forEach(k=>{if(checked(k))addons+=surfaceArea*addonRates[k]*mult});
- let subtotal=kitchen+wardrobes+tv+shoe+study+addons;
- let design=checked('design')?Math.max(18000,subtotal*addonRates.design):0;
- subtotal+=design;
- if(state.scope==='full') subtotal=Math.max(subtotal, state.home===1?450000:state.home===2?700000:state.home===3?1000000:state.home===4?1350000:1800000)*mult;
- if(state.scope==='kitchen') subtotal=Math.max(subtotal,95000*mult);
- if(state.scope==='kitchenward') subtotal=Math.max(subtotal,280000*mult);
- const low=subtotal*.88, high=subtotal*1.16;
- document.getElementById('total').innerHTML=`${money(low)} – ${money(high)} <span>indicative range</span>`;
- document.getElementById('resultCaption').textContent=`A planning range for ${state.home==='villa'?'a villa':state.home+' BHK'} with ${finishNames[state.finish].toLowerCase()} finishes. The final BOQ depends on measured quantities and approved specifications.`;
- document.getElementById('areaOut').textContent=area.toLocaleString('en-IN')+' sq.ft';
- document.getElementById('roomsOut').textContent=rooms+' bedroom'+(rooms>1?'s':'');
- document.getElementById('finishOut').textContent=finishNames[state.finish]+' · '+state.finish+'/3';
- const rows=[['Modular kitchen',kitchen],['Wardrobes & bedroom storage',wardrobes],['TV / media unit',tv],['Shoe storage',shoe],['Study / work station',study],['Optional work',addons],['Design & coordination',design]].filter(x=>x[1]>0);
- document.getElementById('breakdown').innerHTML=rows.map(r=>`<div class="break-row"><span>${r[0]}</span><span>${money(r[1])}</span></div>`).join('')+`<div class="break-row total"><span>Planning subtotal</span><span>${money(subtotal)}</span></div><div class="break-row"><span>Lower planning range</span><span>${money(low)}</span></div><div class="break-row"><span>Upper planning range</span><span>${money(high)}</span></div>`;
- let included=[]; if(kitchen)included.push('modular kitchen');if(wardrobes)included.push('wardrobes');if(tv)included.push('TV unit');if(shoe)included.push('shoe storage');if(study)included.push('study unit');Object.keys(addonLabels).forEach(k=>{if(checked(k))included.push(addonLabels[k].toLowerCase())});
- document.getElementById('includedText').textContent=included.length?included.join(', ')+'.':'No optional add-ons selected.';
+// ─── 01: CROSSHAIR MOUSE TRACKING & HUD ──────────────────
+const ch = document.getElementById('crosshair');
+const chX = document.getElementById('ch-x');
+const chY = document.getElementById('ch-y');
+const coordEl = document.getElementById('coord-readout');
+
+document.addEventListener('mousemove', e => {
+  const x = e.clientX, y = e.clientY;
+  ch.style.left = x + 'px';
+  ch.style.top = y + 'px';
+  chX.style.left = (x - 12) + 'px';
+  chX.style.top = y + 'px';
+  chY.style.left = x + 'px';
+  chY.style.top = (y - 12) + 'px';
+  
+  if (coordEl) {
+    coordEl.textContent = `X:${String(x).padStart(4, '0')} Y:${String(y).padStart(4, '0')}`;
+  }
+});
+
+// ─── 02: THREE.JS AXONOMETRIC 3D SCENE ───────────────────
+const heroCanvas = document.getElementById('hero3d');
+const scene = new THREE.Scene();
+const camera = new THREE.OrthographicCamera(-3, 3, 3, -3, 0.1, 100);
+const renderer = new THREE.WebGLRenderer({ canvas: heroCanvas, alpha: true, antialias: true });
+
+function initThree() {
+  const w = heroCanvas.clientWidth || 500;
+  const h = heroCanvas.clientHeight || 500;
+  renderer.setSize(w, h, false);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+  // Isometric / Axonometric camera position
+  camera.position.set(5, 4, 5);
+  camera.lookAt(0, 0, 0);
+
+  // Lighting
+  const ambLight = new THREE.AmbientLight(0xfff5ea, 0.85);
+  scene.add(ambLight);
+  const dirLight = new THREE.DirectionalLight(0xb66d4b, 1.2);
+  dirLight.position.set(5, 10, 4);
+  scene.add(dirLight);
+
+  // Materials matching palette
+  const matWall = new THREE.MeshLambertMaterial({ color: 0xe8e2d5, transparent: true, opacity: 0.85 });
+  const matWood = new THREE.MeshLambertMaterial({ color: 0xb66d4b });
+  const matDark = new THREE.MeshLambertMaterial({ color: 0x222a23 });
+  const wireMat = new THREE.LineBasicMaterial({ color: 0x1b231d, transparent: true, opacity: 0.25 });
+
+  // Architectural Room Geometry
+  const roomGroup = new THREE.Group();
+
+  // Floor
+  const floorGeo = new THREE.BoxGeometry(3.6, 0.08, 3.6);
+  const floorMesh = new THREE.Mesh(floorGeo, matWall);
+  floorMesh.position.y = -1;
+  roomGroup.add(floorMesh);
+
+  // Back Wall
+  const wallBGeo = new THREE.BoxGeometry(3.6, 2.2, 0.08);
+  const wallBMesh = new THREE.Mesh(wallBGeo, matWall);
+  wallBMesh.position.set(0, 0.1, -1.8);
+  roomGroup.add(wallBMesh);
+
+  // Left Wall
+  const wallLGeo = new THREE.BoxGeometry(0.08, 2.2, 3.6);
+  const wallLMesh = new THREE.Mesh(wallLGeo, matWall);
+  wallLMesh.position.set(-1.8, 0.1, 0);
+  roomGroup.add(wallLMesh);
+
+  // Modular Joinery: Minimalist credenza / TV console
+  const tvUnit = new THREE.Mesh(new THREE.BoxGeometry(2.4, 0.45, 0.45), matWood);
+  tvUnit.position.set(0, -0.65, -1.5);
+  roomGroup.add(tvUnit);
+
+  // Modern Low Lounge Seating
+  const sofa = new THREE.Mesh(new THREE.BoxGeometry(1.8, 0.5, 0.9), matDark);
+  sofa.position.set(0, -0.65, 0.6);
+  roomGroup.add(sofa);
+
+  // Coffee Table
+  const table = new THREE.Mesh(new THREE.CylinderGeometry(0.45, 0.45, 0.25, 24), matWood);
+  table.position.set(0, -0.75, -0.2);
+  roomGroup.add(table);
+
+  // Accent Wall Fluting detail
+  for (let i = -1.2; i <= 1.2; i += 0.15) {
+    const flute = new THREE.Mesh(new THREE.BoxGeometry(0.04, 1.2, 0.02), matWood);
+    flute.position.set(i, 0.3, -1.74);
+    roomGroup.add(flute);
+  }
+
+  // Add subtle edge wireframes
+  roomGroup.traverse(child => {
+    if (child.isMesh && child.geometry) {
+      const edges = new THREE.EdgesGeometry(child.geometry);
+      const line = new THREE.LineSegments(edges, wireMat);
+      child.add(line);
+    }
+  });
+
+  scene.add(roomGroup);
+
+  // Orbit rotation interaction
+  let isDragging = false;
+  let prevMouseX = 0;
+  let targetRotY = 0.8;
+
+  heroCanvas.addEventListener('mousedown', e => {
+    isDragging = true;
+    prevMouseX = e.clientX;
+  });
+  window.addEventListener('mouseup', () => isDragging = false);
+  window.addEventListener('mousemove', e => {
+    if (isDragging) {
+      const delta = e.clientX - prevMouseX;
+      targetRotY += delta * 0.008;
+      prevMouseX = e.clientX;
+    }
+  });
+
+  // Touch Support
+  heroCanvas.addEventListener('touchstart', e => {
+    if (e.touches.length === 1) {
+      isDragging = true;
+      prevMouseX = e.touches[0].clientX;
+    }
+  });
+  window.addEventListener('touchend', () => isDragging = false);
+  window.addEventListener('touchmove', e => {
+    if (isDragging && e.touches.length === 1) {
+      const delta = e.touches[0].clientX - prevMouseX;
+      targetRotY += delta * 0.008;
+      prevMouseX = e.touches[0].clientX;
+    }
+  });
+
+  function animate() {
+    requestAnimationFrame(animate);
+    if (!isDragging) {
+      targetRotY += 0.002;
+    }
+    roomGroup.rotation.y += (targetRotY - roomGroup.rotation.y) * 0.06;
+    renderer.render(scene, camera);
+  }
+  animate();
 }
-function activate(group,attr,value){document.querySelectorAll(`#${group} .choice`).forEach(b=>b.classList.toggle('active',b.dataset[attr]===String(value)))}
-document.querySelectorAll('[data-home]').forEach(b=>b.addEventListener('click',()=>{state.home=b.dataset.home==='villa'?'villa':Number(b.dataset.home);state.rooms=state.home==='villa'?4:Number(state.home);state.area=state.home==='villa'?2200:state.home===1?550:state.home===2?1000:state.home===3?1450:1900;document.getElementById('area').value=state.area;document.getElementById('rooms').value=state.rooms;activate('homeChoices','home',b.dataset.home);calc()}));
-document.querySelectorAll('[data-scope]').forEach(b=>b.addEventListener('click',()=>{state.scope=b.dataset.scope;activate('scopeChoices','scope',state.scope);calc()}));
-document.querySelectorAll('[data-finish]').forEach(b=>b.addEventListener('click',()=>{state.finish=({essential:1,premium:2,luxury:3})[b.dataset.finish];document.getElementById('finishSlider').value=state.finish;activate('finishChoices','finish',b.dataset.finish);calc()}));
-document.getElementById('area').addEventListener('input',e=>{state.area=+e.target.value;calc()});
-document.getElementById('rooms').addEventListener('input',e=>{state.rooms=+e.target.value;calc()});
-document.getElementById('finishSlider').addEventListener('input',e=>{state.finish=+e.target.value;activate('finishChoices','finish',finishNames[state.finish].toLowerCase());calc()});
-document.querySelectorAll('[data-addon]').forEach(e=>e.addEventListener('change',calc));
-const kitchenData={
-'L-shaped':['A versatile corner solution.','Uses two connected walls, keeping the centre open and making it a natural fit for compact and medium-sized homes.'],
-'Parallel':['Efficient, linear workflow.','Two opposing counters can separate prep and cooking zones. Best where there is a clear passage and enough working clearance.'],
-'U-shaped':['Storage on three sides.','A U-shaped plan offers generous counter and storage space. It works best when the room has enough width to avoid a cramped centre.'],
-'Island':['A social centrepiece.','An island can add prep space, casual seating and a gathering point, but needs a larger room and careful circulation planning.']};
-document.querySelectorAll('[data-kitchen]').forEach(b=>b.addEventListener('click',()=>{state.kitchen=b.dataset.kitchen;activate('kitchenChoices','kitchen',state.kitchen);document.getElementById('kitchenTag').textContent=state.kitchen.toUpperCase();document.getElementById('kitchenTitle').textContent=kitchenData[state.kitchen][0];document.getElementById('kitchenDesc').textContent=kitchenData[state.kitchen][1]}));
-const finishData={
-laminate:['Everyday practical.','A versatile, cost-conscious option with a wide range of colours and textures. Final specification depends on substrate and hardware.'],
-acrylic:['Clean, reflective finish.','A smooth, glossy look with a crisp contemporary feel. Surface care and edge details matter.'],
-membrane:['Soft profiles and curves.','A continuous wrapped finish that suits routed or profiled shutter designs. Product quality and heat exposure should be considered.'],
-pu:['A bespoke painted surface.','A premium painted finish with a refined, seamless appearance and a wider colour customisation range.']};
-document.querySelectorAll('[data-kfinish]').forEach(b=>b.addEventListener('click',()=>{state.kfinish=b.dataset.kfinish;activate('kfinishChoices','kfinish',state.kfinish);document.getElementById('finishTag').textContent=state.kfinish.toUpperCase();document.getElementById('finishTitle').textContent=finishData[state.kfinish][0];document.getElementById('finishDesc').textContent=finishData[state.kfinish][1]}));
-document.querySelectorAll('.compare-visual input').forEach(slider=>slider.addEventListener('input',e=>{e.target.previousElementSibling.style.width=e.target.value+'%'}));
-const modal=document.getElementById('contactModal');function openModal(){modal.classList.add('open')}function closeModal(){modal.classList.remove('open')}
-document.getElementById('openContact').addEventListener('click',openModal);document.getElementById('closeModal').addEventListener('click',closeModal);modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
-document.getElementById('sendEstimate').addEventListener('click',()=>{document.getElementById('clientBrief').value=`Cost planner: ${state.home==='villa'?'Villa':state.home+' BHK'} | Scope: ${state.scope} | Area: ${state.area} sq.ft | Bedrooms: ${state.rooms} | Finish: ${finishNames[state.finish]} | Estimate range: ${document.getElementById('total').innerText}. Please help me with a measured quotation.`;openModal()});
-document.getElementById('enquiryForm').addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('clientName').value,phone=document.getElementById('clientPhone').value,email=document.getElementById('clientEmail').value,type=document.getElementById('clientType').value,brief=document.getElementById('clientBrief').value;const subject=encodeURIComponent(`RAY enquiry — ${type}`);const body=encodeURIComponent(`Hello RAY Design & Build by ARCHDUO,\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nRequirement: ${type}\n\nBrief:\n${brief}\n\nPlease contact me to discuss the next steps.`);alert('The enquiry draft is ready. Before publishing, configure RAY’s official email address in the website code.');window.location.href=`mailto:CONTACT_EMAIL_REPLACE_BEFORE_LAUNCH?subject=${subject}&body=${body}`;});
-document.getElementById('menu').addEventListener('click',()=>document.getElementById('navlinks').classList.toggle('open'));
-document.querySelectorAll('#navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));
-document.getElementById('year').textContent=new Date().getFullYear();
-calc();
+window.addEventListener('load', initThree);
+window.addEventListener('resize', () => {
+  const w = heroCanvas.clientWidth || 500;
+  const h = heroCanvas.clientHeight || 500;
+  renderer.setSize(w, h, false);
+});
+
+// ──═ 03: BOQ & AESTHETIX-GRADE COST PLANNER ENGINE ═════
+const boqState = {
+  home: 2,
+  scope: 'full',
+  tier: 2, // 1: Essential, 2: Premium, 3: Luxury
+  area: 1050,
+  rooms: 2,
+  addons: {
+    ceiling: true,
+    paint: true,
+    electrical: false,
+    flooring: false,
+    civil: false,
+    arch: true
+  }
+};
+
+const tierMultiplier = { 1: 0.84, 2: 1.0, 3: 1.35 };
+const tierNames = { 1: 'Essential Standard', 2: 'Premium Architectural', 3: 'Luxury Bespoke' };
+
+function fmtINR(val) {
+  return '₹' + Math.round(val).toLocaleString('en-IN');
+}
+
+function calculateBOQ() {
+  const mult = tierMultiplier[boqState.tier];
+  const area = boqState.area;
+  const rooms = boqState.rooms;
+
+  // Woodwork core computations based on actual factory joinery norms
+  let kitchenCost = 0;
+  let wardrobeCost = 0;
+  let livingStorageCost = 0;
+
+  if (boqState.scope === 'full' || boqState.scope === 'kitchen' || boqState.scope === 'kitchenward') {
+    // 70 to 110 sq.ft of modular kitchen joinery baseline
+    const kSqft = Math.min(Math.max(area * 0.08, 65), 130);
+    kitchenCost = kSqft * 2180 * mult;
+  }
+
+  if (boqState.scope === 'full' || boqState.scope === 'kitchenward') {
+    // 60 sq.ft wardrobe per bedroom
+    const wSqft = rooms * Math.min(Math.max(area * 0.065, 55), 90);
+    wardrobeCost = wSqft * 1850 * mult;
+  }
+
+  if (boqState.scope === 'full') {
+    // TV console, shoe rack foyer, vanity units
+    livingStorageCost = (38000 + 22000 + (rooms * 14000)) * mult;
+  }
+
+  if (boqState.scope === 'shell') {
+    kitchenCost = 0;
+    wardrobeCost = 0;
+    livingStorageCost = 0;
+  }
+
+  // Allied Line Items
+  let ceilingCost = boqState.addons.ceiling ? area * 115 * mult : 0;
+  let paintCost = boqState.addons.paint ? area * 48 * mult : 0;
+  let electricalCost = boqState.addons.electrical ? area * 65 * mult : 0;
+  let flooringCost = boqState.addons.flooring ? area * 135 * mult : 0;
+  let civilCost = boqState.addons.civil ? area * 95 * mult : 0;
+
+  let joinerySubtotal = kitchenCost + wardrobeCost + livingStorageCost;
+  let alliedSubtotal = ceilingCost + paintCost + electricalCost + flooringCost + civilCost;
+
+  let subtotal = joinerySubtotal + alliedSubtotal;
+
+  // Architectural drawings & 3D coordination
+  let archFee = boqState.addons.arch ? Math.max(35000, subtotal * 0.07) : 0;
+  let grandTotal = subtotal + archFee;
+
+  // Minimum floor enforcement for realistic home handovers
+  if (boqState.scope === 'full') {
+    const minFloor = (boqState.home === 1 ? 480000 : boqState.home === 2 ? 720000 : boqState.home === 3 ? 1050000 : boqState.home === 4 ? 1420000 : 1900000) * mult;
+    grandTotal = Math.max(grandTotal, minFloor);
+  }
+
+  // Render to DOM
+  const lowBand = grandTotal * 0.94;
+  const highBand = grandTotal * 1.08;
+
+  document.getElementById('grandTotal').innerHTML = `${fmtINR(lowBand)} – ${fmtINR(highBand)}`;
+  document.getElementById('boqCaption').textContent = 
+    `Indicative BOQ range for a ${boqState.home === 'villa' ? 'Villa' : boqState.home + ' BHK'} (${area.toLocaleString('en-IN')} sq.ft) with ${tierNames[boqState.tier]} materials. Measured site quantities dictate the final signed BOQ.`;
+
+  // Render Line-Items table
+  const lines = [
+    { label: 'Modular Kitchen (BWP Ply + Tandem)', val: kitchenCost },
+    { label: `Wardrobes & Bedroom Storage (${rooms} Rms)`, val: wardrobeCost },
+    { label: 'Foyer, TV Unit & Accent Joinery', val: livingStorageCost },
+    { label: 'Gypsum Ceiling & Lighting Layout', val: ceilingCost },
+    { label: 'Royale Luxury Emulsion Painting', val: paintCost },
+    { label: 'Electrical Wiring & Modular Plates', val: electricalCost },
+    { label: 'Vitrified Tile / Wooden Flooring', val: flooringCost },
+    { label: 'Civil Alterations & Wet Area Prep', val: civilCost },
+    { label: 'Architectural Working Drawings & 3D', val: archFee }
+  ].filter(item => item.val > 0);
+
+  const linesHTML = lines.map(item => `
+    <div class="boq-row">
+      <span>${item.label}</span>
+      <span>${fmtINR(item.val)}</span>
+    </div>
+  `).join('') + `
+    <div class="boq-row grand-total">
+      <span>Estimated Baseline (Excl. GST)</span>
+      <span>${fmtINR(grandTotal)}</span>
+    </div>
+  `;
+
+  document.getElementById('boqLines').innerHTML = linesHTML;
+}
+
+// Attach Event Listeners to BOQ controls
+document.querySelectorAll('#homePills .b-pill').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#homePills .b-pill').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const h = btn.dataset.home;
+    boqState.home = h === 'villa' ? 'villa' : Number(h);
+    
+    // Auto-update sensible defaults
+    if (h === '1') { boqState.area = 550; boqState.rooms = 1; }
+    else if (h === '2') { boqState.area = 1050; boqState.rooms = 2; }
+    else if (h === '3') { boqState.area = 1500; boqState.rooms = 3; }
+    else if (h === '4') { boqState.area = 2100; boqState.rooms = 4; }
+    else if (h === 'villa') { boqState.area = 3200; boqState.rooms = 5; }
+
+    document.getElementById('areaInput').value = boqState.area;
+    document.getElementById('roomInput').value = boqState.rooms;
+    document.getElementById('areaVal').textContent = boqState.area.toLocaleString('en-IN') + ' sq.ft';
+    document.getElementById('roomVal').textContent = boqState.rooms + ' Bedrooms';
+    calculateBOQ();
+  });
+});
+
+document.querySelectorAll('#scopePills .b-pill').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#scopePills .b-pill').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    boqState.scope = btn.dataset.scope;
+    calculateBOQ();
+  });
+});
+
+document.querySelectorAll('#tierGrid .t-card').forEach(card => {
+  card.addEventListener('click', () => {
+    document.querySelectorAll('#tierGrid .t-card').forEach(c => c.classList.remove('active'));
+    card.classList.add('active');
+    boqState.tier = Number(card.dataset.tier);
+    calculateBOQ();
+  });
+});
+
+document.getElementById('areaInput').addEventListener('input', e => {
+  boqState.area = Number(e.target.value);
+  document.getElementById('areaVal').textContent = boqState.area.toLocaleString('en-IN') + ' sq.ft';
+  calculateBOQ();
+});
+
+document.getElementById('roomInput').addEventListener('input', e => {
+  boqState.rooms = Number(e.target.value);
+  document.getElementById('roomVal').textContent = boqState.rooms + ' Bedrooms';
+  calculateBOQ();
+});
+
+document.querySelectorAll('.addon-matrix input').forEach(input => {
+  input.addEventListener('change', () => {
+    boqState.addons[input.dataset.addon] = input.checked;
+    calculateBOQ();
+  });
+});
+
+calculateBOQ();
+
+// ─── 04: INTERACTIVE BLUEPRINT SVG CLICK DISPATCHER ──────
+const fpData = {
+  'room-living': {
+    code: 'ZONE 01 / LIVING & DINING',
+    title: 'Cross-Ventilated Living & Dining',
+    desc: 'Oriented to harness northern light with a direct visual corridor to the balcony. Features an acoustically treated fluted timber media wall and recessed 3000K ambient cove profiles.',
+    finish: 'American Walnut & Calibrated Birch',
+    hardware: 'Hafele Soft-Stop Concealed',
+    lux: '220 Lux Ambient Warm',
+    volume: '175 sq.ft Joinery'
+  },
+  'room-kitchen': {
+    code: 'ZONE 02 / CULINARY SUITE',
+    title: 'Ergonomic Parallel Kitchen',
+    desc: 'Separates hot cooking from wet prep across dual counters. Features 100% boiling-water-proof IS:710 Marine Carcass, quartz worktops with anti-drip edges, and Blum motorized lift-up tandem shutters.',
+    finish: 'Anti-Fingerprint Matte Acrylic',
+    hardware: 'Blum Tandembox Antaro',
+    lux: '450 Lux Task Bright',
+    volume: '120 sq.ft Modular Joinery'
+  },
+  'room-master': {
+    code: 'ZONE 03 / MASTER RETREAT',
+    title: 'Master Bedroom & Walk-in Dresser',
+    desc: 'A calming cocoon with floor-to-ceiling tinted glass wardrobes, dedicated dresser niche, concealed shoe tower, and acoustically backed upholstered bed wall.',
+    finish: 'PU Lacquer & Linen Laminate',
+    hardware: 'Hettich Sensys Integrated Dampers',
+    lux: '160 Lux Relaxed Warm',
+    volume: '140 sq.ft Built-in Wardrobes'
+  },
+  'room-study': {
+    code: 'ZONE 04 / HOME OFFICE & GUEST',
+    title: 'Ergonomic Study & Multipurpose Room',
+    desc: 'Designed for deep focus with cable-managed floating desks, overhead bookshelves with indirect LED strips, and a wall-embedded pull-down Murphy guest bed.',
+    finish: 'Warm Oak & Graphite Matte',
+    hardware: 'Ebco Heavy-Duty Gas Struts',
+    lux: '350 Lux Task Directed',
+    volume: '85 sq.ft Integrated Joinery'
+  }
+};
+
+document.querySelectorAll('.fp-interactive-room').forEach(rm => {
+  rm.addEventListener('click', () => {
+    document.querySelectorAll('.fp-interactive-room').forEach(r => r.classList.remove('active'));
+    rm.classList.add('active');
+
+    const info = fpData[rm.id];
+    if (info) {
+      document.getElementById('fpZoneCode').textContent = info.code;
+      document.getElementById('fpZoneTitle').textContent = info.title;
+      document.getElementById('fpZoneDesc').textContent = info.desc;
+      document.getElementById('fpSpecFinish').textContent = info.finish;
+      document.getElementById('fpSpecHardware').textContent = info.hardware;
+      document.getElementById('fpSpecLux').textContent = info.lux;
+      document.getElementById('fpSpecVolume').textContent = info.volume;
+    }
+  });
+});
+
+// ─── 05: KITCHEN VIEWER TOGGLES ──────────────────────────
+const klData = {
+  lshape: {
+    badge: 'L-SHAPED // CORNER MAXIMIZER',
+    img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85',
+    title: 'Smart Corner Transit',
+    desc: 'Ideal for open living concepts. Frees up central floor space while creating a compact, fatigue-free prep-to-cook triangle.'
+  },
+  parallel: {
+    badge: 'PARALLEL // CHEF WORKFLOW',
+    img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85',
+    title: 'Dual Counter Galley',
+    desc: 'The choice of commercial chefs. Eliminates corner blind spots by dividing wet wash stations and induction cooking across parallel counters.'
+  },
+  ushape: {
+    badge: 'U-SHAPED // MAXIMUM COUNTERTOP',
+    img: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=85',
+    title: 'Three-Sided Enclosure',
+    desc: 'Offers massive continuous counter space and appliance tall units. Best suited for dedicated square rooms with minimum 8ft width.'
+  },
+  island: {
+    badge: 'ISLAND // SOCIAL CENTREPIECE',
+    img: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=85',
+    title: 'Freestanding Gathering Island',
+    desc: 'Blends culinary preparation with informal breakfast seating. Houses integrated wine coolers, pop-up power towers, and prep sinks.'
+  }
+};
+
+document.querySelectorAll('#kLayoutTabs .k-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('#kLayoutTabs .k-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    const d = klData[tab.dataset.kl];
+    if (d) {
+      document.getElementById('klBadge').textContent = d.badge;
+      document.getElementById('klImg').src = d.img;
+      document.getElementById('klTitle').textContent = d.title;
+      document.getElementById('klDesc').textContent = d.desc;
+    }
+  });
+});
+
+const kfData = {
+  lam: {
+    badge: 'HIGH-PRESSURE 1MM LAMINATE',
+    img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85',
+    title: 'Zero-Grit Matte Laminate',
+    desc: 'Hot-pressed under 100 bar pressure with PUR water-resistant edge bands. Highly scratch-proof, budget resilient, and impervious to daily Indian spice heat.'
+  },
+  acryl: {
+    badge: '2MM HIGH-GLOSS ACRYLIC',
+    img: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85',
+    title: 'Mirror-Reflective Acrylic',
+    desc: 'Glass-smooth contemporary sheen. Non-toxic, UV-resistant, and maintains mirror reflection without yellowing over decades.'
+  },
+  pu: {
+    badge: 'MULTI-COAT MATTE PU LACQUER',
+    img: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85',
+    title: 'Bespoke Polyurethane Finish',
+    desc: 'Automotive grade 7-coat Italian PU applied in a dust-free booth. 100% seamless edge transitions with zero edge tape lines.'
+  },
+  fluted: {
+    badge: 'CNC MACHINED FLUTED PROFILE',
+    img: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=85',
+    title: 'Architectural Raked Joinery',
+    desc: 'Precision fluting sculpted into high-density HDHMR boards. Introduces tactile architectural rhythm and soft shadow play.'
+  }
+};
+
+document.querySelectorAll('#kFinishTabs .k-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('#kFinishTabs .k-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    const d = kfData[tab.dataset.kf];
+    if (d) {
+      document.getElementById('kfBadge').textContent = d.badge;
+      document.getElementById('kfImg').src = d.img;
+      document.getElementById('kfTitle').textContent = d.title;
+      document.getElementById('kfDesc').textContent = d.desc;
+    }
+  });
+});
+
+// ─── 06: FORM TRANSMISSION & WHATSAPP SYNC ──────────────
+document.getElementById('btnShareBOQ').addEventListener('click', () => {
+  const currentTotal = document.getElementById('grandTotal').innerText;
+  const area = boqState.area;
+  const home = boqState.home === 'villa' ? 'Villa' : boqState.home + ' BHK';
+  const tier = tierNames[boqState.tier];
+
+  document.getElementById('cBrief').value = 
+    `Generated Estimate: ${home} (${area} sq.ft) // Standard: ${tier} // Range: ${currentTotal}. Ready to review detailed drawings and measured BOQ.`;
+  
+  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+});
+
+document.getElementById('projectInquiryForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const name = document.getElementById('cName').value;
+  const phone = document.getElementById('cPhone').value;
+  const type = document.getElementById('cType').value;
+  const brief = document.getElementById('cBrief').value;
+
+  const mailBody = `Hello Ar. Olimaran & Ar. Ramya (ARCHDUO),\n\nName: ${name}\nPhone: ${phone}\nProject Typology: ${type}\n\nProject Brief & Estimate Context:\n${brief}\n\nTransmitted from raydesignbuild.in`;
+  
+  window.location.href = `mailto:info@raydesignbuild.in?subject=${encodeURIComponent('Project Consultation Brief — ' + name)}&body=${encodeURIComponent(mailBody)}`;
+});
+
+// ─── 07: MENU & YEAR AUTOFILL ────────────────────────────
+document.getElementById('menuToggle').addEventListener('click', () => {
+  const nm = document.getElementById('navMenu');
+  nm.style.display = nm.style.display === 'flex' ? 'none' : 'flex';
+  nm.style.flexDirection = 'column';
+  nm.style.position = 'absolute';
+  nm.style.top = '82px';
+  nm.style.left = '0';
+  nm.style.right = '0';
+  nm.style.background = '#f5f1ea';
+  nm.style.padding = '24px';
+  nm.style.borderBottom = '1px solid #dbd6cb';
+});
+
+document.getElementById('fYear').textContent = new Date().getFullYear();
 </script>
-</body></html>
+</body>
+</html>
